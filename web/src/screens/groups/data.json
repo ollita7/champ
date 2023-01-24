@@ -27,7 +27,7 @@
         "name": "GRUPO C",
         "members": [
           { "name": "J. Ramos", "country": "UY"},
-          { "name": "J. Van Kerchoven", "country": "ZA"},
+          { "name": "J. Van Kerckhoven", "country": "ZA"},
           { "name": "M. Coore", "country": "UY"},
           { "name": "I. Veiga", "country": "UY"},
           { "name": "R. Ferreri", "country": "AR"}
@@ -37,8 +37,8 @@
         "name": "GRUPO D",
         "members": [
           { "name": "L. Viola", "country": "UY"},
-          { "name": "M. Buxik", "country": "UY"},
-          { "name": "J. Echevarria", "country": "UY"},
+          { "name": "M. Buzik", "country": "UY"},
+          { "name": "J. Echeverria", "country": "UY"},
           { "name": "A. Llambias", "country": "UY"},
           { "name": "J. Vazquez", "country": "UY"},
           { "name": "G. Menendez", "country": "UY"}
