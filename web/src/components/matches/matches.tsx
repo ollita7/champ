@@ -6,16 +6,19 @@ import data from '../../db/data.json';
 import PersonIcon from '@mui/icons-material/Person';
 
 export interface IGroupsProps {
-  matches: any
+  group: any
 }
 
-const Groups: React.FC<IGroupsProps> = ({ matches, ...props }): ReactElement => {
+const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
   return (
     <div className='matches'>
         <Typography>
-          {matches.map(match => 
+          {group.matches.map(match => 
             <div className='match'>
-              <div className='details'>{match.date}</div>
+              <div className='details'>
+                <span className='title'>{group.name}</span>
+                <span className='date'></span>{match.date}
+              </div>
               <div className='player'>
                 <PersonIcon /> 
                 <span className='member'>{match.player_1.name}</span>

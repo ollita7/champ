@@ -94,7 +94,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
         <CardActions>
           <Button size="small" onClick={toggleMatches}> {showDetail ? <ExpandLessIcon/>: <ExpandMoreIcon/>} Ver partidos</Button>
         </CardActions>
-        {showDetail && <Matches matches={group.matches}/>}
+        {showDetail && <Matches group={group}/>}
       </Card>
     </div>
   )
