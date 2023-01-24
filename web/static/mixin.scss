@@ -1,0 +1,64 @@
+@import './colors.scss';
+
+@mixin textBasisXL($size) {
+    font-size: $size;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 2vw;
+    color: $font-color;
+}
+
+@mixin textBasisBold($size) {
+    font-size: $size;
+    line-height: normal;
+    font-weight: 900;
+    color: $font-color;
+}
+
+@mixin textBasis($size) {
+    font-size: $size;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $font-color;
+}
+
+@mixin textBasisLighter($size) {
+    font-size: $size;
+    font-weight: lighter;
+    font-stretch: lighter;
+    font-style: lighter;
+    line-height: lighter;
+    letter-spacing: lighter;
+    color: $font-color;
+}
+
+
+@mixin media-sm{
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
+@mixin media-md{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+@mixin media-lg{
+    @media screen and (max-width:1024px){
+        @content;
+    }
+}
+@mixin media-max-lg{
+    @media screen and (max-width:1195px){
+        @content;
+    }
+}
+@mixin media-xl{
+    @media screen and (max-width:1600px){
+        @content;
+    }
+}

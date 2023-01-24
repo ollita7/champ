@@ -1,0 +1,88 @@
+@import "../../../static/colors.scss";
+@import "../../../static/variables.scss";
+$border-anchor: 2px;
+$initWidth: 250px;
+.left-menu {
+    position: relative;
+    
+    .conainer-efect {
+        transition: width ease 0.3s;
+        width: $initWidth;
+        height: 100%;
+        .arrow {
+            position: absolute;
+            top: 30px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            border: $primary-color solid $border-anchor;
+            border-radius: 60px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            cursor: pointer;
+            transition: transform ease 0.3s;
+            &.close {
+                transform: rotate(180deg);
+                transition: transform ease 0.3s;
+            }
+        }
+        &.close {
+            width: 60px;
+            transition: width ease 0.3s;
+            overflow-x: hidden;
+        }
+        &.open {
+            transition: width ease 0.3s;
+            width: $initWidth;
+        }
+        .conainer-left-menu {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-sizing: border-box;
+            padding: 20px 10px;
+            width: $initWidth;
+            min-height: 100%;
+            background-color: $system-white;
+            border-right: $border-anchor solid $primary-color;
+
+            h3.title {
+                font-weight: bold;
+                text-align: left;
+                padding-left: 5px;
+            }
+            .context-menu,
+            .main-menu {
+                box-shadow: none;
+                ul {
+                    background-color: transparent;
+                    padding: 10px 5px;
+                    .icon-menu {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .context-menu {
+                margin-bottom: 10px;
+                ul {
+                    background-color: rgba($primary-color, 50%);
+                    border: $primary-color solid 2px;
+                    border-radius: $border-radius;
+                    color: $system-white;
+                    padding: 10px 5px;
+                    .icon-menu {
+                        color: $system-white;
+                        margin-right: 5px;
+                        path {
+                            fill: $system-white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

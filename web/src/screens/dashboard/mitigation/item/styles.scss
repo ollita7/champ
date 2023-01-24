@@ -1,0 +1,47 @@
+@import "../../../../../static/colors.scss";
+@import "../../../../../static/mixin.scss";
+@import "../../../../../static/variables.scss";
+
+
+
+.mitigation-container {
+  //margin-bottom: $margin-default;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    border: 1px solid $primary-color !important;
+     .project-item{
+        border: unset;
+        border-bottom: 1px solid $system-grey;
+     }
+  }
+
+  .mitigation-item {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    border-bottom: 1px solid $system-grey;
+    padding: 10px;
+    //margin-bottom: $margin-default;
+    background-color: white;
+    align-items: center;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  
+    .item-wrapper {
+      display: flex;
+      align-items: center;
+  
+      .mitigation-info {
+        display: flex;
+        flex-direction: column;
+        font-size: $text;
+      }
+    }
+  }
+}

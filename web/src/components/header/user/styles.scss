@@ -1,0 +1,12 @@
+@import "../../../../static/colors.scss";
+
+.arrow-drop-down{
+    path{
+        color: $system-white;
+    }
+}
+li {
+    span {
+        font-weight: 400;
+    }
+}

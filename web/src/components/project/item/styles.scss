@@ -1,0 +1,80 @@
+@import "../../../../static/colors.scss";
+@import "../../../../static/mixin.scss";
+@import "../../../../static/variables.scss";
+
+.item-container {
+  margin-bottom: $margin-default;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    border: 1px solid $primary-color !important;
+     .project-item{
+        border: unset;
+        border-bottom: 1px solid $system-grey;
+     }
+  }
+
+  .project-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    padding: 10px;
+    max-width: 100%;
+    background-color: $white;
+    border: 1px solid $system-grey;
+    height: 30px;
+    
+    &:hover,
+    &.active {
+      background-color: $project-selected;
+
+      .project-name {
+        font-weight: 500;
+      }
+    }
+
+    .project-name {
+      @include textBasis($subtitle);
+      text-transform: capitalize;
+      width: 100%;
+      flex: 80 auto;
+
+      &:hover {
+        cursor: pointer;
+        font-weight: 500;
+      }
+    }
+
+    .options {
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .expanded {
+      transform: rotate(0deg);
+      transition: transform 200ms ease-out;
+    }
+
+    .collapsed {
+      transform: rotate(-90deg);
+      transition: transform 200ms ease-out;
+    }
+  }
+
+  #long-menu {
+    a {
+      text-decoration: none;
+    }
+
+    .context-menu:hover {
+      background-color: transparent;
+    }
+  }
+}

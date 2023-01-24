@@ -1,0 +1,33 @@
+@import "../../../../static/colors.scss";
+@import "../../../../static/mixin.scss";
+@import "../../../../static/variables.scss";
+
+.component-item {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  border: 1px solid $system-grey;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: white;
+  align-items: center;
+
+  .item-wrapper {
+    display: flex;
+    align-items: center;
+
+    .status{
+      margin-left: 21px;
+      background-color:$primary-color;
+      border-radius: 20px;
+      opacity: 0.8;
+      height: 20px;
+      span{
+        font-size: 14px;
+        text-align:center;
+        color:$white;
+        
+      }
+    }
+  }
+}

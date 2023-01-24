@@ -1,0 +1,18 @@
+@import "../../../../static/colors.scss";
+@import "../../../../static/mixin.scss";
+@import "../../../../static/variables.scss";
+
+#application-container {
+  position: relative;
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+
+  .list-container, .new-component-container {
+    margin-top: 32px;
+  }
+  
+  .new-component-container {
+    display: flex;
+  }
+}

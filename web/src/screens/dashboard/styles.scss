@@ -1,0 +1,52 @@
+@import "../../../static/colors.scss";
+@import "../../../static/mixin.scss";
+@import "../../../static/variables.scss";
+
+#dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+
+  .lists-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-right: $margin-default;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-right: $margin-default;
+    }
+  }
+
+  .title {
+    display: flex;
+    
+    h3 {
+      margin-left: 10px;
+      font-weight: bold;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .expanded {
+    height: 45px;
+    margin-top: 8px;
+    transform: rotate(0deg);
+    transition: transform 200ms ease-out;
+  }
+
+  .collapsed {
+    height: 45px;
+    margin-top: 8px;
+    transform: rotate(-90deg);
+    transition: transform 200ms ease-out;
+  }
+}

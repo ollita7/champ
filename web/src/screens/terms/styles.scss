@@ -1,0 +1,70 @@
+@import '../../../static/styles.scss';
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    .header{
+
+        padding: 0 19% 0 19%;
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        background-color: white;
+        
+        .google-btn{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 175px;
+            border-radius: 2px;
+            border: 1px solid transparent;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: Roboto, sans-serif;
+            box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px 0px, rgb(0 0 0 / 24%) 0px 0px 1px 0px;
+            background-color: #211f47!important;
+            align-items: center;
+            &:hover{
+                cursor: pointer;
+            }
+            span{
+                height: 44px;
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                color: white!important;
+            }
+          }
+    }
+    .content{
+        margin-top: $header-height;
+        display: flex;
+        flex-direction: column;
+        height: 550px;
+        .tittle{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background-color: $primary-color-dark;
+            padding: 0 19% 0 19%;
+            height: 250px;
+            justify-content: center;
+            h1{
+                color: white;
+            }
+            h3{
+                color: white;
+            }
+        }
+        .body{
+            .back-btn{
+                text-decoration: underline;
+               cursor: pointer;
+            }
+            p{
+                display: inline-block;
+            }
+            padding: 0 19% 0 19%;
+        }
+    }
+}

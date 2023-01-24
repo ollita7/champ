@@ -1,0 +1,61 @@
+@import "../../../../../static/colors.scss";
+@import "../../../../../static/mixin.scss";
+@import "../../../../../static/variables.scss";
+
+
+
+.risk-container {
+  margin-bottom: $margin-default;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    border: 1px solid $primary-color !important;
+     .project-item{
+        border: unset;
+        border-bottom: 1px solid $system-grey;
+     }
+  }
+
+  .risk-item {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    border: 1px solid $system-grey;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+    
+    
+    a{
+      color: $primary-button;
+      text-transform: capitalize;
+      text-decoration: none;
+      font-weight: 400;
+      &:hover{
+        font-weight: 500;
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-wrapper {
+      display: flex;
+      align-items: center;
+
+      .risk-info {
+        display: flex;
+        gap: 5px;
+        font-size: $text;
+        .name{
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

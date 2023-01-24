@@ -1,0 +1,26 @@
+@import "../../../../../static/colors.scss";
+@import "../../../../../static/mixin.scss";
+@import "../../../../../static/variables.scss";
+
+.component-list-container {
+  display: flex;
+  justify-content: flex-start;
+
+  .component-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 !important;
+    
+
+    .no-component-msg {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+
+  .loading-container {
+    width: 100%;
+    padding: $padding-default 0;
+  }
+}

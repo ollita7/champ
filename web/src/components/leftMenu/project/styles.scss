@@ -1,0 +1,26 @@
+@import '../../../../static/colors.scss';
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .title{
+        padding: 5px;
+        h2,h3{
+            margin:0;
+        }
+        h2{
+            font-size: 18px;   
+            font-weight: 400;         
+        }
+        h3{
+            font-size: 14px;
+        }
+        
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "tournament":{
+    "date": "Febrero 2023",
+    "name": "Copa Jorge Mesones",
+    "groups": [
+      {
+        "name": "GRUPO A",
+        "members": [
+          { "name": "S. Ferro", "country": "UY"},
+          { "name": "D. Ponte", "country": "AR"},
+          { "name": "I. Moro", "country": "UY"},
+          { "name": "G. Pazos", "country": "UY"},
+          { "name": "F. Ferrero", "country": "UY"},
+          { "name": "C. Obregon", "country": "UY"}
+      ]},
+      {
+        "name": "GRUPO B",
+        "members": [
+          { "name": "E. Dalmas", "country": "UY"},
+          { "name": "G. Gorg", "country": "AR"},
+          { "name": "M. Marella", "country": "UY"},
+          { "name": "A. Chifflet","country": "UY"}, 
+          { "name": "G. Fernandez", "country": "ES"}
+        ]
+      },
+      {
+        "name": "GRUPO C",
+        "members": [
+          { "name": "J. Ramos", "country": "UY"},
+          { "name": "J. Van Kerchoven", "country": "ZA"},
+          { "name": "M. Coore", "country": "UY"},
+          { "name": "I. Veiga", "country": "UY"},
+          { "name": "R. Ferreri", "country": "AR"}
+        ]
+      },
+      {
+        "name": "GRUPO D",
+        "members": [
+          { "name": "L. Viola", "country": "UY"},
+          { "name": "M. Buxik", "country": "UY"},
+          { "name": "J. Echevarria", "country": "UY"},
+          { "name": "A. Llambias", "country": "UY"},
+          { "name": "J. Vazquez", "country": "UY"},
+          { "name": "G. Menendez", "country": "UY"}
+        ]
+      }
+    ]
+  }
+}

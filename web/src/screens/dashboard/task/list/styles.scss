@@ -1,0 +1,14 @@
+@import "../../../../../static/colors.scss";
+@import "../../../../../static/mixin.scss";
+@import "../../../../../static/variables.scss";
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: $margin-default;
+  //overflow-y: auto;
+  //max-height: 300px;
+  padding-right: 9px;
+}
+
