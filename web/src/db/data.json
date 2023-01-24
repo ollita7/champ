@@ -1,0 +1,76 @@
+{
+  "tournament":{
+    "date": "Febrero 2023",
+    "name": "Copa Jorge Mesones",
+    "groups": [
+      {
+        "name": "GRUPO A",
+        "members": [
+          { "name": "S. Ferro", "country": "UY"},
+          { "name": "D. Ponte", "country": "AR"},
+          { "name": "I. Moro", "country": "UY"},
+          { "name": "G. Pazos", "country": "UY"},
+          { "name": "F. Ferrero", "country": "UY"},
+          { "name": "C. Obregon", "country": "UY"}
+        ],
+        "matches": [
+          {
+            "date": "TBD",
+            "player_1": {"name": "S. Ferro", "sets": []},
+            "player_2": {"name": "D. Ponte", "sets": []}
+          },
+          {
+            "date": "TBD",
+            "player_1": {"name": "S. Ferro", "sets": []},
+            "player_2": {"name": "I. Moro", "sets": []}
+          }
+        ]
+      },
+      {
+        "name": "GRUPO B",
+        "members": [
+          { "name": "E. Dalmas", "country": "UY"},
+          { "name": "G. Gorg", "country": "AR"},
+          { "name": "M. Marella", "country": "UY"},
+          { "name": "A. Chifflet","country": "UY"}, 
+          { "name": "G. Fernandez", "country": "ES"}
+        ],
+        "matches": [
+          {
+            "date": "TBD",
+            "player_1": {"name": "E. Dalmas", "sets": []},
+            "player_2": {"name": "G. Gorg", "sets": []}
+          },
+          {
+            "date": "TBD",
+            "player_1": {"name": "E. Dalmas", "sets": []},
+            "player_2": {"name": "M. Marella", "sets": []}
+          }
+        ]
+      },
+      {
+        "name": "GRUPO C",
+        "members": [
+          { "name": "J. Ramos", "country": "UY"},
+          { "name": "J. Van Kerckhoven", "country": "ZA"},
+          { "name": "M. Coore", "country": "UY"},
+          { "name": "I. Veiga", "country": "UY"},
+          { "name": "R. Ferreri", "country": "AR"}
+        ],
+        "matches": []
+      },
+      {
+        "name": "GRUPO D",
+        "members": [
+          { "name": "L. Viola", "country": "UY"},
+          { "name": "M. Buzik", "country": "UY"},
+          { "name": "J. Echavarria", "country": "UY"},
+          { "name": "A. Llambias", "country": "UY"},
+          { "name": "J. Vazquez", "country": "UY"},
+          { "name": "G. Menendez", "country": "UY"}
+        ],
+        "matches": []
+      }
+    ]
+  }
+}

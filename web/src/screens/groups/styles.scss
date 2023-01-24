@@ -1,5 +1,5 @@
 .groups {
-  margin: 8px;
+  margin: 20px;
   .breadcrumbs{
     padding-bottom: 40px;
   }
@@ -8,10 +8,8 @@
     .member{
       padding-left: 20px;
     }
+    .name{
+      padding-left: 16px;
+    }
   }
-}
-
-.menu{
-  margin: -8px -8px 40px -8px;
-  background-color: #363536;
 }

@@ -48,7 +48,7 @@ const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
           </div>
           {error &&
               <span className='error'>Some error ocurred trying to authenticate</span>}
-          <span>By logging in or signing up, you agree to abide by our policies, including our  <Link to={ROUTES.TERMS}>Terms of Service</Link> and <Link to={ROUTES.POLICIES}>Privacy Policy</Link></span>
+          <span>By logging in or signing up, you agree to abide by our policies, including our  <Link to="">Terms of Service</Link> and <Link to="">Privacy Policy</Link></span>
         </div>
       </div>
       

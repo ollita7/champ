@@ -4,13 +4,9 @@ import { Login } from '../screens/login';
 import { Payment } from '../screens/payment';
 import ProtectedRoute from './protectedRoute'
 import { ROUTES } from './constants';
-import { Dashboard } from '../screens/dashboard';
-import { Project } from '../screens/project/form';
-import { Application } from '../screens/application/home';
-import { Terms, Privacy } from '../screens/terms';
-import Projects from '../screens/projects/projects';
 import { Groups } from '../screens/groups';
 import { NotFound } from '../screens/notfound';
+import { Matches } from '../screens/matches';
 
 const Navigator = (): React.ReactElement => {
 
@@ -18,6 +14,7 @@ const Navigator = (): React.ReactElement => {
     <Routes>
       {/* PUBLIC ROUTES */}
       <Route path={ROUTES.HOME} element={<Groups />} />
+      <Route path={ROUTES.MATCHES} element={<Matches />} />
       
       {/*
       <Route path={ROUTES.LOGIN} element={<Login />} />
@@ -31,12 +28,6 @@ const Navigator = (): React.ReactElement => {
       <Route path={ROUTES.HOME} element={<ProtectedRoute />}>
         <Route index element={<Dashboard />} />
         <Route path={ROUTES.HOME} element={<Dashboard />} />
-        <Route path={`${ROUTES.RISKS}/:idProject`} element={<Dashboard />} />
-        <Route path={`${ROUTES.RISKS}/:idProject/:idAplication`} element={<Dashboard />} />
-        <Route path={`${ROUTES.RISKS}/:idProject/:idAplication/:idComponent`} element={<Dashboard />} />
-        <Route path={ROUTES.PROJECTS} element={<Projects />}/>
-        <Route path={`${ROUTES.PROJECT}/:id`} element={<Project />} />
-        <Route path={`${ROUTES.APPLICATION}/:id`} element={<Application />} />
       </Route>
       */}
 
