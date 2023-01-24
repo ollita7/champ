@@ -6,7 +6,6 @@ import ProtectedRoute from './protectedRoute'
 import { ROUTES } from './constants';
 import { Groups } from '../screens/groups';
 import { NotFound } from '../screens/notfound';
-import { Matches } from '../screens/matches';
 
 const Navigator = (): React.ReactElement => {
 
@@ -14,7 +13,6 @@ const Navigator = (): React.ReactElement => {
     <Routes>
       {/* PUBLIC ROUTES */}
       <Route path={ROUTES.HOME} element={<Groups />} />
-      <Route path={ROUTES.MATCHES} element={<Matches />} />
       
       {/*
       <Route path={ROUTES.LOGIN} element={<Login />} />

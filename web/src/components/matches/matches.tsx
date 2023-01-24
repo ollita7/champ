@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import ResponsiveMenu from '../../components/menu/menu'
+import ResponsiveMenu from '../menu/menu'
 import ReactCountryFlag from "react-country-flag"
 
 import data from '../../db/data.json';
