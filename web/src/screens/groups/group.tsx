@@ -10,7 +10,7 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead, {tableHeadClasses} from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import { Matches } from '../../components/matches';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import ReactCountryFlag from "react-country-flag";
@@ -93,9 +93,8 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
         </CardContent>
         <CardActions>
           <Button size="small" onClick={toggleMatches}> {showDetail ? <ExpandLessIcon/>: <ExpandMoreIcon/>} Ver partidos</Button>
-          {/*showDetail &&
-            <div className=''> Partidos</div>*/}
         </CardActions>
+        {showDetail && <Matches matches={group.matches}/>}
       </Card>
     </div>
   )
