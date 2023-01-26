@@ -32,7 +32,7 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
     <div className='matches'>
       {matches.map(match => 
         <div className='match' key={match.id}>
-          <Item variant="outlined" elevation={4}>
+          <Item elevation={4}>
             <div className='details'>
               <span className='date'><Typography>
                 {match.date === 'TBD' ?

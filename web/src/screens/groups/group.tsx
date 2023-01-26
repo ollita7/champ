@@ -36,7 +36,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:last-child td, &:last-child th': {
     border: 0,
   },
-  '&:nth-child(1), &:nth-child(2) ': {
+ '&:nth-child(1), &:nth-child(2)': {
     borderLeft: '5px solid #FFD700'
   },
   '&:nth-child(3), &:nth-child(4)': {
@@ -48,9 +48,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
   boxShadow: 'none'
 }));
-
-//GOLD: 
-//SILVER: 
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -94,7 +91,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {group.members.map((member) => (
+                  {group.members.map((member, index) => (
                     <StyledTableRow
                       key={member.name}
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
