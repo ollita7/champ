@@ -16,7 +16,7 @@ import { styled } from '@mui/material/styles';
 import ReactCountryFlag from "react-country-flag";
 import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton'; 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -36,11 +36,21 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:last-child td, &:last-child th': {
     border: 0,
   },
+  '&:nth-child(1), &:nth-child(2) ': {
+    borderLeft: '5px solid #FFD700'
+  },
+  '&:nth-child(3), &:nth-child(4)': {
+    borderLeft: '5px solid #B5B7BB'
+  },
+
 }));
 
 const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
   boxShadow: 'none'
 }));
+
+//GOLD: 
+//SILVER: 
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
