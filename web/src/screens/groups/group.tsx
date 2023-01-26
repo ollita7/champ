@@ -29,6 +29,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  position: 'relative',
   '&:nth-of-type(odd)': {
     //backgroundColor: theme.palette.action.hover,
   },
@@ -36,11 +37,29 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:last-child td, &:last-child th': {
     border: 0,
   },
- '&:nth-child(1), &:nth-child(2)': {
-    borderLeft: '5px solid #FFD700'
+  '&:nth-child(1) th, &:nth-child(2) th': {
+    '&::before':{
+      content:'""',
+      width: 5,
+      background:'#FFD700',
+      position: 'absolute',
+      left: '5px',
+      top: '10%',
+      height: '80%',
+      borderRadius: 25
+    },
   },
-  '&:nth-child(3), &:nth-child(4)': {
-    borderLeft: '5px solid #B5B7BB'
+  '&:nth-child(3) th, &:nth-child(4) th': {
+    '&::before':{
+      content:'""',
+      width: 5,
+      background:'#B5B7BB',
+      position: 'absolute',
+      left: '5px',
+      top: '10%',
+      height: '80%',
+      borderRadius: 25
+    },
   },
 }));
 
