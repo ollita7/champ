@@ -17,7 +17,7 @@ const Groups: React.FC<IGroupsProps> = ({ ...props }): ReactElement => {
   return (
     <div className='groups'>
       <ResponsiveMenu name="Campeonato" date={data.tournament.date}/>
-      <Typography color="text.primary"><h1>Grupos</h1></Typography>
+      <h1><Typography color="text.primary">Grupos</Typography></h1>
       <Breadcrumbs aria-label="breadcrumb" className='breadcrumbs'>
         <Link underline="hover" color="inherit" href="/">
           {data.tournament.name}
@@ -25,7 +25,7 @@ const Groups: React.FC<IGroupsProps> = ({ ...props }): ReactElement => {
         <Typography color="text.primary">{data.tournament.date}</Typography>
       </Breadcrumbs>
       {data.tournament.groups.map(group => 
-        <Group group={group}></Group>
+        <Group group={group} key={group.name}></Group>
       )}
     </div>
   )

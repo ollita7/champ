@@ -7,9 +7,10 @@
     .details{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      padding-bottom: 20px;
       .date{
-        font-weight: 600;
+        font-weight: 300;
       }
       .title{
         color: grey;

@@ -14,8 +14,10 @@ import { Matches } from '../../components/matches';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import ReactCountryFlag from "react-country-flag";
+import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -41,21 +43,36 @@ const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
   boxShadow: 'none'
 }));
 
+interface ExpandMoreProps extends IconButtonProps {
+  expand: boolean;
+}
+
+const ExpandMore = styled((props: ExpandMoreProps) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
+
 export interface IGroupsProps {
   group: any;
 }
 
 const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
-  const [showDetail, setShowDetail] = useState(false);
+  const [expanded, setExpanded] = React.useState(false);
 
-  const toggleMatches = () =>{
-    setShowDetail(!showDetail);
-  }
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
   return (
     <div className='group' key={group.name}>
       <Card sx={{ minWidth: 275 }}>
-        <Typography color="text.primary"><h2 className='name'>{group.name}</h2></Typography>
+      <h2 className='name'><Typography color="text.primary">{group.name}</Typography></h2>
         <CardContent>
           <StyledTableContainer>
               <Table aria-label="simple table">
@@ -63,9 +80,8 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                   <TableRow>
                     <StyledTableCell></StyledTableCell>
                     <StyledTableCell>P</StyledTableCell>
-                    <StyledTableCell>SF</StyledTableCell>
-                    <StyledTableCell>SC</StyledTableCell>
-                    <StyledTableCell>Pts</StyledTableCell>
+                    <StyledTableCell>S</StyledTableCell>
+                    <StyledTableCell>P</StyledTableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -76,12 +92,11 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                     >
                       <StyledTableCell component="th" scope="row">
                         <ReactCountryFlag style={{
-                            fontSize: '2em',
-                            lineHeight: '2em',
+                            fontSize: '1em',
+                            lineHeight: '1em',
                         }}countryCode={member.country} svg /> 
                         <span className='member'>{member.name} </span>
                       </StyledTableCell>
-                      <StyledTableCell component="th" scope="row">0</StyledTableCell>
                       <StyledTableCell component="th" scope="row">0</StyledTableCell>
                       <StyledTableCell component="th" scope="row">0</StyledTableCell>
                       <StyledTableCell component="th" scope="row">0</StyledTableCell>
@@ -92,9 +107,21 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
             </StyledTableContainer>
         </CardContent>
         <CardActions>
-          <Button size="small" onClick={toggleMatches}> {showDetail ? <ExpandLessIcon/>: <ExpandMoreIcon/>} Ver partidos</Button>
+          <ExpandMore
+            expand={expanded}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+            name='Ver Partidos'
+            title='dasd'
+            value='fsdfsad'
+          >
+            <ExpandMoreIcon />
+          </ExpandMore>
         </CardActions>
-        {showDetail && <Matches group={group}/>}
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <Matches group={group.name}/>
+        </Collapse>
       </Card>
     </div>
   )

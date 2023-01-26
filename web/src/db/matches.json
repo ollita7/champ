@@ -1,0 +1,354 @@
+{
+  "matches": [
+    {
+      "id": 1,
+      "date": "TBD", 
+      "group":"GRUPO A", 
+      "player_1": {"name": "S. Ferro"}, 
+      "player_2": {"name": "D. Ponte"}
+    },
+    {
+      "id": 2,
+      "date": "TBD", 
+      "group":"GRUPO A", 
+      "player_1": {"name": "S. Ferro"},
+      "player_2": {"name": "I. Moro"}
+    },
+    {
+      "id": 3,
+      "date": "TBD", 
+      "group":"GRUPO A", 
+      "player_1": {"name": "SS. Ferro"}, 
+      "player_2": {"name": "G. Pazos"}
+    },
+    {
+      "id": 4,
+      "date": "TBD", 
+      "group":"GRUPO A", 
+      "player_1": {"name": "S. Ferro"}, 
+      "player_2": {"name": "F. Ferrero"}
+    },
+    {
+      "id": 5,
+      "date": "TBD", 
+      "group":"GRUPO A", 
+      "player_1": {"name": "S. Ferro"}, 
+      "player_2": {"name": "C. Obregon"}
+    },
+    {
+      "id": 6,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "D. Ponte"}, 
+      "player_2": {"name": "I. Moro"}
+    },
+    {
+      "id": 7,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1":  {"name": "D. Ponte"}, 
+      "player_2":  {"name": "G. Pazos"}
+    },
+    {
+      "id": 8,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "D. Ponte"}, 
+      "player_2": {"name": "F. Ferrero"}
+    },
+    {
+      "id": 9,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "D. Ponte"},
+       "player_2": {"name": "C. Obregon"}
+    },
+    {
+      "id": 10,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "I. Moro"}, 
+      "player_2": {"name": "G. Pazos"}
+    },
+    {
+      "id": 11,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "I. Moro"}, 
+      "player_2": {"name": "F. Ferrero"}
+    },
+    {
+      "id": 12,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "I. Moro"}, 
+      "player_2": {"name": "C. Obregon"}
+    },
+    {
+      "id": 13,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "G. Pazos"},
+      "player_2": {"name": "F. Ferrero"}
+    },
+    {
+      "id": 14,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "G. Pazos"}, 
+      "player_2": {"name": "C. Obregon"}
+    },
+    {
+      "id": 15,
+      "date": "TBD",
+      "group":"GRUPO A", 
+      "player_1": {"name": "F. Ferrero"}, 
+      "player_2": {"name": "C. Obregon"}
+    },
+    { 
+      "id": 16,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "E. Dalmas"}, 
+      "player_2": {"name": "G. Gorg"}
+    },
+    {    
+      "id": 17,
+      "date": "02/02/20023 19:15",
+      "group":"GRUPO B", 
+      "player_1": {"name": "E. Dalmas"}, 
+      "player_2": {"name": "M. Marella"}
+    },
+    {
+      "id": 18,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "E. Dalmas"}, 
+      "player_2": {"name": "A. Chifflet"}
+    },
+    { 
+      "id": 19,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "E. Dalmas"}, 
+      "player_2": {"name": "G. Fernandez"}
+    },
+    { 
+      "id": 20,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "G. Gorg"}, 
+      "player_2": {"name": "M. Marella"}
+    },
+    { 
+      "id": 21,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "G. Gorg"}, 
+      "player_2": {"name": "A. Chifflet"}
+    },
+    { 
+      "id": 22,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "G. Gorg"}, 
+      "player_2": {"name": "G. Fernandez"}
+    },
+    { 
+      "id": 23,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "M. Marella"}, 
+      "player_2": {"name": "A. Chifflet"}
+    },
+    {  
+      "id": 24,
+      "date": "01/30/2023 17:00",
+      "group":"GRUPO B", 
+      "player_1": {"name": "M. Marella"}, 
+      "player_2": {"name": "G. Fernandez"}
+    },
+    {
+      "id": 25,
+      "date": "TBD",
+      "group":"GRUPO B", 
+      "player_1": {"name": "A. Chifflet"}, 
+      "player_2": {"name": "G. Fernandez"}
+    },
+    {   
+      "id": 26,
+      "date": "01/29/2023 17:00",
+      "group":"GRUPO C", 
+      "player_1": {"name": "J. Ramos"}, 
+      "player_2": {"name": "J. Van Kerckhoven"}
+    },
+    {  
+      "id": 27,
+      "date": "01/17/2023 17:00",
+      "group":"GRUPO C", 
+      "player_1": {"name": "J. Ramos"}, 
+      "player_2": {"name": "M. Coore"}
+    },
+    { 
+      "id": 28,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "J. Ramos"}, 
+      "player_2": {"name": "I. Veiga"}
+    },
+    { 
+      "id": 29,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "J. Ramos"}, 
+      "player_2": {"name": "R. Ferreri"}
+    },
+    { 
+      "id": 30,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "J. Van Kerckhoven"}, 
+      "player_2": {"name": "M. Coore"}
+    },
+    { 
+      "id": 31,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "J. Van Kerckhoven"}, 
+      "player_2": {"name": "I. Veiga"}
+    },
+    { 
+      "id": 32,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "J. Van Kerckhoven"}, 
+      "player_2": {"name": "R. Ferreri"}
+    },
+    { 
+      "id": 33,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "M. Coore"}, 
+      "player_2": {"name": "I. Veiga"}
+    },
+    { 
+      "id": 34,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "M. Coore"}, 
+      "player_2": {"name": "R. Ferreri"}
+    },
+    { 
+      "id": 35,
+      "date": "TBD",
+      "group":"GRUPO C", 
+      "player_1": {"name": "I. Veiga"}, 
+      "player_2": {"name": "R. Ferreri"}
+    },
+    {  
+      "id": 36,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "L. Viola"}, 
+      "player_2": {"name": "M. Buzik"}
+    },
+    {  
+      "id": 37,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "L. Viola"}, 
+      "player_2": {"name": "J. Echavarria"}
+    },
+    {  
+      "id": 38,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "L. Viola"}, 
+      "player_2": {"name": "A. Llambias"}
+    },
+    {  
+      "id": 39,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "L. Viola"}, 
+      "player_2": {"name": "J. Vazquez"}
+    },
+    {  
+      "id": 40,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "L. Viola"}, 
+      "player_2": {"name": "G. Menendez"}
+    },
+    {  
+      "id": 41,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "M. Buzik"}, 
+      "player_2": {"name": "J. Echavarria"}
+    },
+    {  
+      "id": 42,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "M. Buzik"}, 
+      "player_2": {"name": "A. Llambias"}
+    },
+    {  
+      "id": 43,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "M. Buzik"}, 
+      "player_2": {"name": "J. Vazquez"}
+    },
+    {    
+      "id": 44,
+      "date": "01/17/2023 19:30",
+      "group":"GRUPO D", 
+      "player_1": {"name": "M. Buzik"}, 
+      "player_2": {"name": "G. Menendez"}
+    },
+    {  
+      "id": 45,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "J. Echavarria"}, 
+      "player_2": {"name": "A. Llambias"}
+    },
+    {  
+      "id": 46,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "J. Echavarria"}, 
+      "player_2": {"name": "J. Vazquez"}
+    },
+    {  
+      "id": 47,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "J. Echavarria"}, 
+      "player_2": {"name": "G. Menendez"}
+    },
+    {  
+      "id": 48,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "A. Llambias"}, 
+      "player_2": {"name": "J. Vazquez"}
+    },
+    {  
+      "id": 49,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "A. Llambias"}, 
+      "player_2": {"name": "G. Menendez"}
+    },
+    {  
+      "id": 50,
+      "date": "TBD",
+      "group":"GRUPO D", 
+      "player_1": {"name": "J. Vazquez"}, 
+      "player_2": {"name": "G. Menendez"}
+    }
+  ]
+}

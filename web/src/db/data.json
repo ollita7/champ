@@ -12,18 +12,6 @@
           { "name": "G. Pazos", "country": "UY"},
           { "name": "F. Ferrero", "country": "UY"},
           { "name": "C. Obregon", "country": "UY"}
-        ],
-        "matches": [
-          {
-            "date": "TBD",
-            "player_1": {"name": "S. Ferro", "sets": []},
-            "player_2": {"name": "D. Ponte", "sets": []}
-          },
-          {
-            "date": "TBD",
-            "player_1": {"name": "S. Ferro", "sets": []},
-            "player_2": {"name": "I. Moro", "sets": []}
-          }
         ]
       },
       {
@@ -34,18 +22,6 @@
           { "name": "M. Marella", "country": "UY"},
           { "name": "A. Chifflet","country": "UY"}, 
           { "name": "G. Fernandez", "country": "ES"}
-        ],
-        "matches": [
-          {
-            "date": "TBD",
-            "player_1": {"name": "E. Dalmas", "sets": []},
-            "player_2": {"name": "G. Gorg", "sets": []}
-          },
-          {
-            "date": "TBD",
-            "player_1": {"name": "E. Dalmas", "sets": []},
-            "player_2": {"name": "M. Marella", "sets": []}
-          }
         ]
       },
       {
