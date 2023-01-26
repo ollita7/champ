@@ -17,7 +17,7 @@ import ReactCountryFlag from "react-country-flag";
 import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'; 
-
+import { CircleFlag } from 'react-circle-flags'
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     //backgroundColor: '#464646',
@@ -42,7 +42,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-child(3), &:nth-child(4)': {
     borderLeft: '5px solid #B5B7BB'
   },
-
 }));
 
 const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
@@ -97,11 +96,10 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                       <StyledTableCell component="th" scope="row">
-                        <ReactCountryFlag style={{
-                            fontSize: '1em',
-                            lineHeight: '1em',
-                        }}countryCode={member.country} svg /> 
-                        <span className='member'>{member.name} </span>
+                        <div className='country'>
+                          <CircleFlag countryCode={member.country.toLowerCase()} height="25"/>
+                          <span className='member'>{member.name} </span>
+                        </div>
                       </StyledTableCell>
                       <StyledTableCell component="th" scope="row">0</StyledTableCell>
                       <StyledTableCell component="th" scope="row">0</StyledTableCell>

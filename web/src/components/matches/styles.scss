@@ -14,15 +14,15 @@
       .title{
         color: grey;
       }
+    }
+    .player{
+      padding-top: 16px;
+      padding-left: 16px;
+      display: flex;
+      flex-direction: row;
       .member{
         padding-left: 20px;
       }
-    }
-    .player{
-      padding-top: 10px;
-      padding-left: 10px;
-      display: flex;
-      flex-direction: row;
     }
   }
 }

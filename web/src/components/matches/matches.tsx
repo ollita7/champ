@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from 'react';
 import './styles.scss'
 import Typography from '@mui/material/Typography';
 import ReactCountryFlag from "react-country-flag"
-import PersonIcon from '@mui/icons-material/Person';
+import { CircleFlag } from 'react-circle-flags'
 import Paper from '@mui/material/Paper';
 import data from '../../db/matches.json';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
@@ -42,20 +42,14 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
                 {<span className='title'><Typography fontSize={11}>{group}</Typography></span>}
             </div>
             <div className='player'>
-            <div className='img'>
-              <ReactCountryFlag style={{
-                              fontSize: '1em',
-                              lineHeight: '1em',
-                          }}countryCode="UY" svg /> 
+              <div className='img'>
+                <CircleFlag countryCode="uy" height="25"/>
               </div>
               <span className='member'><Typography>{match.player_1.name}</Typography></span>
             </div>
             <div className='player'>
               <div className='img'>
-                <ReactCountryFlag style={{
-                              fontSize: '1em',
-                              lineHeight: '1em',
-                          }}countryCode="UY" svg /> 
+                <CircleFlag countryCode="uy" height="25"/>
               </div>
               <span className='member'><Typography >{match.player_2.name}</Typography></span>
             </div>
