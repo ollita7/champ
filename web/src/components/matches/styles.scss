@@ -1,14 +1,13 @@
 .matches {
+  background: #f1f3f7;
   .match{
     padding: 16px;
-    background-color: #e7dfdf78;
-    margin: 16px;
-    border-radius: 5px;
     .details{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
       .date{
         font-weight: 300;
       }
@@ -20,7 +19,10 @@
       }
     }
     .player{
+      padding-top: 10px;
+      padding-left: 10px;
       display: flex;
+      flex-direction: row;
     }
   }
 }

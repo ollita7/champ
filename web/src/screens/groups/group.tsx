@@ -16,7 +16,6 @@ import { styled } from '@mui/material/styles';
 import ReactCountryFlag from "react-country-flag";
 import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
