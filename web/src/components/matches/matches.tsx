@@ -66,7 +66,7 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
       {tbd_matches.length > 0 &&
         <Typography>
           <div className='more-less' onClick={() => setExpanded(!expanded)}>
-            {expanded ? 'Ocultar' : `Ver mas (${tbd_matches.length} partidos sin definir)`} 
+            {expanded ? 'Partidos a definir' : `Ver mas (${tbd_matches.length} partidos sin definir)`} 
             <ExpandMoreIcon className={expanded ? 'icon expanded' : 'icon'}/>
           </div>
         </Typography>
