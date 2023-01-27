@@ -1,5 +1,5 @@
 .matches {
-  background: #c8de58a3;
+  background: #b9b8b8;
   padding: 16px 0 0 0;
   .expand{
     transition: all 2s;
@@ -10,8 +10,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 16px;
-    color: white;
-    font-size: 14px;
+    color: black;
     .icon{
       transform: rotate(0deg);
       &.expanded{
@@ -21,6 +20,9 @@
 
   }
   .match{
+    &.disabled > div{
+      background: #cbcccd;
+    }
     padding: 0 16px 16px 16px;
     .details{
       display: flex;

@@ -32,10 +32,21 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
                                       });
 
   const tbd_matches = groupMatches.filter(match => match.date == 'TBD');
-     
-  const renderMatch = (match) => {
-    return (<div className='match' key={match.id} >
-        <Item elevation={4} style={{backgroundColor: '#f1f3f8'}}>
+  
+  const renderResult = (result, player) => {
+    if (result)
+      return (
+        <div className='result'>
+          <div className='set_1'>{result.set_1.games[player]}</div>
+          <div className='set_2'>{result.set_2.games[player]}</div>
+          {result.super && <div className='tie'>{result.super[player]}</div>}
+        </div>
+      )
+  }
+
+  const renderMatch = (match, disable = false) => {
+    return (<div className={disable ? 'match disabled': 'match'} key={match.id} >
+        <Item elevation={4} >
           <div className='details'>
             <span className='date'><Typography>
               {match.date === 'TBD' ?
@@ -49,19 +60,21 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
               <CircleFlag countryCode="uy" height="25"/>
             </div>
             <span className='member'><Typography>{match.player_1.name}</Typography></span>
+            {renderResult(match.result, 0)}
           </div>
           <div className='player'>
             <div className='img'>
               <CircleFlag countryCode="uy" height="25"/>
             </div>
             <span className='member'><Typography >{match.player_2.name}</Typography></span>
+            {renderResult(match.result, 1)}
           </div>
         </Item>
       </div>);
   }
 
   return (
-    <div className='matches' style={{backgroundColor: group.color}}>
+    <div className='matches'>
       {defined_matches.map(match => renderMatch(match))}
       {tbd_matches.length > 0 &&
         <Typography>
@@ -73,7 +86,7 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
       }
       {expanded &&
         <div className='expand'>
-          {tbd_matches.map(match => renderMatch(match))}
+          {tbd_matches.map(match => renderMatch(match, true))}
         </div>
       }
     </div>

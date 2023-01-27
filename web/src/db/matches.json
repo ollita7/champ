@@ -166,7 +166,13 @@
       "date": "01/30/2023 17:00",
       "group":"GRUPO B", 
       "player_1": {"name": "M. Marella"}, 
-      "player_2": {"name": "G. Fernandez"}
+      "player_2": {"name": "G. Fernandez"},
+      "result": {
+        "set_1": {"games": [7,6], "tie": true, "tie_result": [8, 6]},
+        "set_2": {"games": [6,7], "tie": true, "tie_result": [6, 8]},
+        "super": [6, 10],
+        "winner": 1
+      }
     },
     {
       "id": 25,

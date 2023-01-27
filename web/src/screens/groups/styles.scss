@@ -30,6 +30,7 @@
         .country{
           display: flex;
           align-items: center;
+          padding-left: 20px;
           .member{
             padding-left: 20px;
           }
@@ -37,7 +38,7 @@
       }
     }
     .name{
-      padding-left: 16px;
+      padding-left: 10px;
       margin-bottom: 0;
     }
     .expand-more{

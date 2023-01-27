@@ -76,7 +76,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
     <div className='group' key={group.name}>
       <Card sx={{ minWidth: 275 }}>
         <h2 className='name' >
-          <Typography color="text.primary" style={{color: group.color}}>{group.name}</Typography>
+          <Typography color="text.primary">{group.name}</Typography>
           </h2>
         <CardContent>
           <StyledTableContainer>
@@ -84,8 +84,8 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                 <TableHead >
                   <TableRow>
                     <StyledTableCell></StyledTableCell>
-                    <StyledTableCell>P</StyledTableCell>
-                    <StyledTableCell>S</StyledTableCell>
+                    <StyledTableCell>PJ</StyledTableCell>
+                    <StyledTableCell>SF</StyledTableCell>
                     <StyledTableCell>P</StyledTableCell>
                   </TableRow>
                 </TableHead>
