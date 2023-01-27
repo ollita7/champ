@@ -5,6 +5,7 @@
     "groups": [
       {
         "name": "GRUPO A",
+        "color": "#ff9c00",
         "members": [
           { "name": "S. Ferro", "country": "UY"},
           { "name": "D. Ponte", "country": "AR"},
@@ -16,6 +17,7 @@
       },
       {
         "name": "GRUPO B",
+        "color": "#006cc8",
         "members": [
           { "name": "E. Dalmas", "country": "UY"},
           { "name": "G. Gorg", "country": "AR"},
@@ -26,6 +28,7 @@
       },
       {
         "name": "GRUPO C",
+        "color": "#50bc20",
         "members": [
           { "name": "J. Ramos", "country": "UY"},
           { "name": "J. Van Kerckhoven", "country": "ZA"},
@@ -37,6 +40,7 @@
       },
       {
         "name": "GRUPO D",
+        "color": "#dc1058",
         "members": [
           { "name": "L. Viola", "country": "UY"},
           { "name": "M. Buzik", "country": "UY"},

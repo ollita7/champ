@@ -16,14 +16,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export interface IGroupsProps {
-  group: string
+  group: any;
 }
 
 const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
   const groupMatches = data.matches
-                          .filter(match => match.group == group );
+                          .filter(match => match.group == group.name );
   const defined_matches = groupMatches.filter(match => match.date != 'TBD')
                                       .sort((a,b) => {
                                         let dateA = new Date(a.date);
@@ -34,15 +34,15 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
   const tbd_matches = groupMatches.filter(match => match.date == 'TBD');
      
   const renderMatch = (match) => {
-    return (<div className='match' key={match.id}>
-        <Item elevation={4}>
+    return (<div className='match' key={match.id} >
+        <Item elevation={4} style={{backgroundColor: '#f1f3f8'}}>
           <div className='details'>
             <span className='date'><Typography>
               {match.date === 'TBD' ?
                 <strong>{match.date}</strong>
                 :new Date(match.date).toLocaleDateString('es-es', { weekday:"long", year:"numeric", month:"short", day:"numeric", hour: "2-digit", minute: "2-digit"}) 
               }</Typography></span>
-              {<span className='title'><Typography fontSize={11}>{group}</Typography></span>}
+              {<span className='title'><Typography fontSize={11}>{group.name}</Typography></span>}
           </div>
           <div className='player'>
             <div className='img'>
@@ -61,7 +61,7 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
   }
 
   return (
-    <div className='matches'>
+    <div className='matches' style={{backgroundColor: group.color}}>
       {defined_matches.map(match => renderMatch(match))}
       {tbd_matches.length > 0 &&
         <Typography>

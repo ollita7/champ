@@ -75,7 +75,9 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
   return (
     <div className='group' key={group.name}>
       <Card sx={{ minWidth: 275 }}>
-      <h2 className='name'><Typography color="text.primary">{group.name}</Typography></h2>
+        <h2 className='name' >
+          <Typography color="text.primary" style={{color: group.color}}>{group.name}</Typography>
+          </h2>
         <CardContent>
           <StyledTableContainer>
               <Table aria-label="simple table">
@@ -125,7 +127,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
           </ExpandMore>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <Matches group={group.name}/>
+          <Matches group={group}/>
         </Collapse>
       </Card>
     </div>
