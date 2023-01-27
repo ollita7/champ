@@ -62,7 +62,9 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
   return (
     <div className='matches'>
       {defined_matches.map(match => renderMatch(match))}
-      <Typography><div className='more-less' onClick={() => setExpanded(!expanded)}>{expanded ? 'Ver (-)' : 'Ver (+)'}</div></Typography>
+      {tbd_matches.length > 0 &&
+        <Typography><div className='more-less' onClick={() => setExpanded(!expanded)}>{expanded ? 'Ver (-)' : `Ver mas (${tbd_matches.length} partidos sin definir)`}</div></Typography>
+      }
       {expanded &&
         <div className='expand'>
           {tbd_matches.map(match => renderMatch(match))}
