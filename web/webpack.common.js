@@ -36,7 +36,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "static", "index.html"),
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
   devServer: {
     historyApiFallback: true,

@@ -5,11 +5,35 @@
   }
   .group {
     padding-bottom: 40px;
-    .country{
-      display: flex;
-      align-items: center;
-      .member{
-        padding-left: 20px;
+    .table{
+      .table-row{
+        &:nth-child(1) th:nth-child(1)::before, &:nth-child(2) th:nth-child(1)::before {
+          content:'';
+          width: 5px;
+          background:#FFD700;
+          position: absolute;
+          left: 5px;
+          top: 10%;
+          height: 80%;
+          border-radius: 25px;
+        }
+        &:nth-child(3) th:nth-child(1)::before, &:nth-child(4) th:nth-child(1)::before {
+          content:'';
+          width: 5px;
+          background:#B5B7BB;
+          position: absolute;
+          left: 5px;
+          top: 10%;
+          height: 80%;
+          border-radius: 25px;
+        }
+        .country{
+          display: flex;
+          align-items: center;
+          .member{
+            padding-left: 20px;
+          }
+        }
       }
     }
     .name{

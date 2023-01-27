@@ -19,6 +19,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'; 
 import { CircleFlag } from 'react-circle-flags'
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  position: 'relative',
   [`&.${tableCellClasses.head}`]: {
     //backgroundColor: '#464646',
     //color: theme.palette.common.white,
@@ -36,10 +37,10 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   // hide last border
   '&:last-child td, &:last-child th': {
     border: 0,
-  },
-  '&:nth-child(1) th, &:nth-child(2) th': {
-    '&::before':{
-      content:'""',
+  }
+  /*':nth-child(1) th': {
+    '::before':{
+      content:'" "',
       width: 5,
       background:'#FFD700',
       position: 'absolute',
@@ -48,10 +49,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
       height: '80%',
       borderRadius: 25
     },
-  },
-  '&:nth-child(3) th, &:nth-child(4) th': {
-    '&::before':{
-      content:'""',
+    '&:nth-child(3)::before, &:nth-child(4)::before':{
+      content:'" "',
       width: 5,
       background:'#B5B7BB',
       position: 'absolute',
@@ -59,8 +58,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
       top: '10%',
       height: '80%',
       borderRadius: 25
-    },
-  },
+    }
+  },*/
+ 
 }));
 
 const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
@@ -108,13 +108,14 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                     <StyledTableCell>P</StyledTableCell>
                   </TableRow>
                 </TableHead>
-                <TableBody>
+                <TableBody className='table'>
                   {group.members.map((member, index) => (
                     <StyledTableRow
                       key={member.name}
+                      className='table-row'
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
-                      <StyledTableCell component="th" scope="row">
+                      <StyledTableCell component="th" scope="row" >
                         <div className='country'>
                           <CircleFlag countryCode={member.country.toLowerCase()} height="25"/>
                           <span className='member'>{member.name} </span>

@@ -11,18 +11,16 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import SportsTennisIcon from '@mui/icons-material/SportsTennis';
+import Logo from '../../assets/logo.svg';
 
 import './styles.scss'
 
 const pages = ['Grupos'/*, 'Ranking'*/];
 
 export interface IResponsiveMenuProps {
-  name: string;
-  date: string;
 }
 
-const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ name, date, ...props }): ReactElement => {
+const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -43,28 +41,9 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ name, date, ...props }
 
   return (
     <div className='menu'>
-      <AppBar position="static">
+      <AppBar position="static" className='header'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <SportsTennisIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              {name}
-            </Typography>
-
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -101,25 +80,6 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ name, date, ...props }
                 ))}
               </Menu>
             </Box>
-            <SportsTennisIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href=""
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              {name}
-            </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Button
@@ -134,6 +94,10 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ name, date, ...props }
           </Toolbar>
         </Container>
       </AppBar>
+      <div className='logo'>
+        <img src={Logo} alt="logo" />
+      </div>
+      
     </div>
     
   );

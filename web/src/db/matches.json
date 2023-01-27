@@ -100,7 +100,7 @@
     },
     {
       "id": 15,
-      "date": "TBD",
+      "date": "01/31/2023 16:00",
       "group":"GRUPO A", 
       "player_1": {"name": "F. Ferrero"}, 
       "player_2": {"name": "C. Obregon"}
@@ -149,7 +149,7 @@
     },
     { 
       "id": 22,
-      "date": "TBD",
+      "date": "01/31/2023 15:00",
       "group":"GRUPO B", 
       "player_1": {"name": "G. Gorg"}, 
       "player_2": {"name": "G. Fernandez"}
@@ -184,7 +184,7 @@
     },
     {  
       "id": 27,
-      "date": "01/17/2023 17:00",
+      "date": "01/27/2023 17:00",
       "group":"GRUPO C", 
       "player_1": {"name": "J. Ramos"}, 
       "player_2": {"name": "M. Coore"}
@@ -303,14 +303,14 @@
     },
     {    
       "id": 44,
-      "date": "01/17/2023 19:30",
+      "date": "01/27/2023 19:30",
       "group":"GRUPO D", 
       "player_1": {"name": "M. Buzik"}, 
       "player_2": {"name": "G. Menendez"}
     },
     {  
       "id": 45,
-      "date": "TBD",
+      "date": "01/28/2023 17:00",
       "group":"GRUPO D", 
       "player_1": {"name": "J. Echavarria"}, 
       "player_2": {"name": "A. Llambias"}
