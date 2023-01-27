@@ -38,29 +38,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:last-child td, &:last-child th': {
     border: 0,
   }
-  /*':nth-child(1) th': {
-    '::before':{
-      content:'" "',
-      width: 5,
-      background:'#FFD700',
-      position: 'absolute',
-      left: '5px',
-      top: '10%',
-      height: '80%',
-      borderRadius: 25
-    },
-    '&:nth-child(3)::before, &:nth-child(4)::before':{
-      content:'" "',
-      width: 5,
-      background:'#B5B7BB',
-      position: 'absolute',
-      left: '5px',
-      top: '10%',
-      height: '80%',
-      borderRadius: 25
-    }
-  },*/
- 
 }));
 
 const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
@@ -75,7 +52,9 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  '.more-icon':{
+    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  },
   marginLeft: 'auto',
   transition: theme.transitions.create('transform', {
     duration: theme.transitions.duration.shortest,
@@ -139,8 +118,10 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
             name='Ver Partidos'
             title='dasd'
             value='fsdfsad'
+            className='expand-more'
           >
-            <ExpandMoreIcon />
+            <span className='ver' >Ver Partidos</span>
+            <ExpandMoreIcon className='more-icon'/>
           </ExpandMore>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>

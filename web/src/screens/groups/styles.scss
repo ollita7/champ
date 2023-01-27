@@ -40,5 +40,12 @@
       padding-left: 16px;
       margin-bottom: 0;
     }
+    .expand-more{
+      span{
+        transform:rotate(0deg);
+        font-size: 14px;
+        transition: none;
+      }
+    }
   }
 }
