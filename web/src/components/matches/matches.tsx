@@ -4,7 +4,8 @@ import Typography from '@mui/material/Typography';
 import { CircleFlag } from 'react-circle-flags'
 import Paper from '@mui/material/Paper';
 import data from '../../db/matches.json';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -63,7 +64,12 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
     <div className='matches'>
       {defined_matches.map(match => renderMatch(match))}
       {tbd_matches.length > 0 &&
-        <Typography><div className='more-less' onClick={() => setExpanded(!expanded)}>{expanded ? 'Ver (-)' : `Ver mas (${tbd_matches.length} partidos sin definir)`}</div></Typography>
+        <Typography>
+          <div className='more-less' onClick={() => setExpanded(!expanded)}>
+            {expanded ? 'Ocultar' : `Ver mas (${tbd_matches.length} partidos sin definir)`} 
+            <ExpandMoreIcon className={expanded ? 'icon expanded' : 'icon'}/>
+          </div>
+        </Typography>
       }
       {expanded &&
         <div className='expand'>
