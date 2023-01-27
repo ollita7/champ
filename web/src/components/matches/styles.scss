@@ -1,7 +1,8 @@
 .matches {
   background: #c8de58a3;
+  padding: 16px 0;
   .match{
-    padding: 16px;
+    padding: 0 16px 16px 16px;
     .details{
       display: flex;
       flex-direction: column;
