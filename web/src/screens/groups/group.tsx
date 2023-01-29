@@ -3,7 +3,6 @@ import './styles.scss'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
@@ -13,11 +12,12 @@ import TableRow from '@mui/material/TableRow';
 import { Matches } from '../../components/matches';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-import ReactCountryFlag from "react-country-flag";
 import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'; 
 import { CircleFlag } from 'react-circle-flags'
+import { getStandings } from '../../network/services/match/match.services';
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   position: 'relative',
   [`&.${tableCellClasses.head}`]: {
@@ -67,6 +67,7 @@ export interface IGroupsProps {
 
 const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
   const [expanded, setExpanded] = React.useState(false);
+  const standing = getStandings(group.name);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -90,21 +91,21 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                   </TableRow>
                 </TableHead>
                 <TableBody className='table'>
-                  {group.members.map((member, index) => (
+                  {standing.map((s, index) => (
                     <StyledTableRow
-                      key={member.name}
+                      key={s.member.name}
                       className='table-row'
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                       <StyledTableCell component="th" scope="row" >
                         <div className='country'>
-                          <CircleFlag countryCode={member.country.toLowerCase()} height="25"/>
-                          <span className='member'>{member.name} </span>
+                          <CircleFlag countryCode={s.member.country.toLowerCase()} height="25"/>
+                          <span className='member'>{s.member.name} </span>
                         </div>
                       </StyledTableCell>
-                      <StyledTableCell component="th" scope="row">0</StyledTableCell>
-                      <StyledTableCell component="th" scope="row">0</StyledTableCell>
-                      <StyledTableCell component="th" scope="row">0</StyledTableCell>
+                      <StyledTableCell component="th" scope="row">{s.pj}</StyledTableCell>
+                      <StyledTableCell component="th" scope="row">{s.sf}</StyledTableCell>
+                      <StyledTableCell component="th" scope="row">{s.pts}</StyledTableCell>
                     </StyledTableRow>
                   ))}
                 </TableBody>

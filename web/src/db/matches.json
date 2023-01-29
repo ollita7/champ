@@ -18,7 +18,7 @@
       "id": 3,
       "date": "TBD", 
       "group":"GRUPO A", 
-      "player_1": {"name": "SS. Ferro"}, 
+      "player_1": {"name": "S. Ferro"}, 
       "player_2": {"name": "G. Pazos"}
     },
     {
@@ -166,13 +166,7 @@
       "date": "01/30/2023 17:00",
       "group":"GRUPO B", 
       "player_1": {"name": "M. Marella"}, 
-      "player_2": {"name": "G. Fernandez"},
-      "result": {
-        "set_1": {"games": [7,6], "tie": true, "tie_result": [8, 6]},
-        "set_2": {"games": [6,7], "tie": true, "tie_result": [6, 8]},
-        "super": [6, 10],
-        "winner": 1
-      }
+      "player_2": {"name": "G. Fernandez"}
     },
     {
       "id": 25,
@@ -193,7 +187,12 @@
       "date": "01/27/2023 17:00",
       "group":"GRUPO C", 
       "player_1": {"name": "J. Ramos"}, 
-      "player_2": {"name": "M. Coore"}
+      "player_2": {"name": "M. Coore"},
+      "result": {
+        "set_1": {"games": [6,1], "tie": false},
+        "set_2": {"games": [6,0], "tie": false},
+        "winner": 0
+      }
     },
     { 
       "id": 28,
@@ -312,14 +311,25 @@
       "date": "01/27/2023 19:30",
       "group":"GRUPO D", 
       "player_1": {"name": "M. Buzik"}, 
-      "player_2": {"name": "G. Menendez"}
+      "player_2": {"name": "G. Menendez"},
+      "result": {
+        "set_1": {"games": [6,0], "tie": false},
+        "set_2": {"games": [6,1], "tie": false},
+        "winner": 0
+      }
     },
     {  
       "id": 45,
       "date": "01/28/2023 17:00",
       "group":"GRUPO D", 
       "player_1": {"name": "J. Echavarria"}, 
-      "player_2": {"name": "A. Llambias"}
+      "player_2": {"name": "A. Llambias"},
+      "result": {
+        "set_1": {"games": [6,3], "tie": false, "tie_result": [8, 6]},
+        "set_2": {"games": [4,6], "tie": false, "tie_result": [6, 8]},
+        "super": [10, 8],
+        "winner": 0
+      }
     },
     {  
       "id": 46,

@@ -42,8 +42,29 @@
       padding-left: 16px;
       display: flex;
       flex-direction: row;
+      align-items: center;
       .member{
         padding-left: 20px;
+        &.winner{
+          font-weight: 700;
+        }
+      }
+      .result{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex: 1;
+        align-items: center;
+        .check{
+          color: #0091d2;
+        }
+        .set{
+          width: 15px;
+          padding-right: 15px;
+          &.winner{
+            font-weight: 700;
+          }
+        }
       }
     }
   }
