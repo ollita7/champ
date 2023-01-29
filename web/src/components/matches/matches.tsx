@@ -30,7 +30,7 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
                                       .sort((a,b) => {
                                         let dateA = new Date(a.date);
                                         let dateB = new Date(b.date);
-                                        return dateA.getTime() - dateB.getTime()
+                                        return dateA.valueOf()  - dateB.valueOf() 
                                       });
 
   const tbd_matches = groupMatches.filter(match => match.date == 'TBD');
@@ -41,11 +41,11 @@ const Groups: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
       return (
         <div className='result'>
           {winner && <div className='check'><CheckIcon /></div>}
-          <div className={winner ? 'set winner' : 'set'}>
+          <div className={result.set_1.games[player] > result.set_1.games[1 - player] ? 'set winner' : 'set'}>
             {result.set_1.games[player]}
             {result.set_1.tie && <sup>{result.set_1.tie_result[player]}</sup>}
           </div>
-          <div className={winner ? 'set winner' : 'set'}>
+          <div className={result.set_2.games[player] > result.set_2.games[1 -player] ? 'set winner' : 'set'}>
             {result.set_2.games[player]}
             {result.set_1.tie && <sup>{result.set_2.tie_result[player]}</sup>}
           </div>
