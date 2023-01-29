@@ -180,7 +180,12 @@
       "date": "01/29/2023 17:00",
       "group":"GRUPO C", 
       "player_1": {"name": "J. Ramos"}, 
-      "player_2": {"name": "J. Van Kerckhoven"}
+      "player_2": {"name": "J. Van Kerckhoven"},
+      "result": {
+        "set_1": {"games": [6,2], "tie": false},
+        "set_2": {"games": [6,1], "tie": false},
+        "winner": 0
+      }
     },
     {  
       "id": 27,
