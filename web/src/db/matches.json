@@ -114,7 +114,7 @@
     },
     {    
       "id": 17,
-      "date": "02/02/20023 19:15",
+      "date": "02/01/20023 19:15",
       "group":"GRUPO B", 
       "player_1": {"name": "E. Dalmas"}, 
       "player_2": {"name": "M. Marella"}
@@ -128,7 +128,7 @@
     },
     { 
       "id": 19,
-      "date": "TBD",
+      "date": "02/02/2023 19:15",
       "group":"GRUPO B", 
       "player_1": {"name": "E. Dalmas"}, 
       "player_2": {"name": "G. Fernandez"}
@@ -201,7 +201,7 @@
     },
     { 
       "id": 28,
-      "date": "TBD",
+      "date": "01/31/2023",
       "group":"GRUPO C", 
       "player_1": {"name": "J. Ramos"}, 
       "player_2": {"name": "I. Veiga"}
