@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,29 +16,25 @@ import { ROUTES } from '../../navigation/constants';
 import './styles.scss'
 
 const pages = [
-  {title: 'Grupos', link: ROUTES.MATCHES}, 
-  {title: 'Cruces', link: ROUTES.QUALIFYINGS}];
+  {title: 'Grupos', link: ROUTES.HOME}, 
+  {title: 'Cruces', link: ROUTES.QUALIFYINGS},
+  {title: 'Ranking', link: ROUTES.RANKING}
+];
 
 export interface IResponsiveMenuProps {
 }
 
 const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page: string | null = null) => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+    if (page) navigate(page);
   };
 
   return (
@@ -69,13 +66,13 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
                   horizontal: 'left',
                 }}
                 open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
+                onClose={() => handleCloseNavMenu()}
                 sx={{
                   display: { xs: 'block', md: 'none' },
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page.title} onClick={() => handleCloseNavMenu(page.link)}>
                     <Typography textAlign="center">{page.title}</Typography>
                   </MenuItem>
                 ))}
@@ -85,7 +82,7 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
               {pages.map((page) => (
                 <Button
                   key={page.title}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => handleCloseNavMenu(page.link)}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                   {page.title}

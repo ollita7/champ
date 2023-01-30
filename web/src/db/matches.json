@@ -121,7 +121,7 @@
     },
     {
       "id": 18,
-      "date": "TBD",
+      "date": "01/31/2023 19:15",
       "group":"GRUPO B", 
       "player_1": {"name": "E. Dalmas"}, 
       "player_2": {"name": "A. Chifflet"}
@@ -201,7 +201,7 @@
     },
     { 
       "id": 28,
-      "date": "01/31/2023",
+      "date": "01/31/2023 17:00",
       "group":"GRUPO C", 
       "player_1": {"name": "J. Ramos"}, 
       "player_2": {"name": "I. Veiga"}

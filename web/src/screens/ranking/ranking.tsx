@@ -1,24 +1,24 @@
+import { Typography } from '@mui/material';
 import React, { ReactElement, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import ResponsiveMenu from '../../components/menu/menu';
-import { Typography } from '@mui/material';
+import ResponsiveMenu from '../../components/menu/menu'
 import { ROUTES } from '../../navigation/constants';
 import { Config } from '../../utils';
 
 import './styles.scss'
 
-export interface IQualifyingProps {
+export interface IRankingProps {
 
 }
 
-const Qualifying: React.FC<IQualifyingProps> = ({ ...props }): ReactElement => {
+const Ranking: React.FC<IRankingProps> = ({ ...props }): ReactElement => {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
 
   const handleSuccess = (res) => {
     const id_token = res.getAuthResponse().id_token;
     localStorage.setItem(Config.TOKEN_NAME, id_token);
-    navigate(ROUTES.HOME);
+    navigate(ROUTES.MATCHES);
   }
 
   const handleError = (res) => {
@@ -26,11 +26,11 @@ const Qualifying: React.FC<IQualifyingProps> = ({ ...props }): ReactElement => {
   }
 
   return (
-    <div className='qualifying'>
+    <div className='ranking'>
        <ResponsiveMenu/>
        <h3><Typography>Proximamente</Typography></h3>
     </div>
   )
 }
 
-export default Qualifying;
+export default Ranking;

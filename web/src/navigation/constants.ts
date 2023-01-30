@@ -4,6 +4,7 @@ enum ROUTES {
   HOME = '/',
   MATCHES = '/matches',
   QUALIFYINGS = '/qualifyings',
+  RANKING = '/ranking',
   WILDCARD = '*',
 }
 
