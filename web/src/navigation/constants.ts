@@ -3,6 +3,7 @@ enum ROUTES {
   PAYMENT = '/payment',
   HOME = '/',
   MATCHES = '/matches',
+  QUALIFYINGS = '/qualifyings',
   WILDCARD = '*',
 }
 

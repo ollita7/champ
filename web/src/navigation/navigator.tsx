@@ -6,6 +6,7 @@ import ProtectedRoute from './protectedRoute'
 import { ROUTES } from './constants';
 import { Groups } from '../screens/groups';
 import { NotFound } from '../screens/notfound';
+import { Qualifying } from '../screens/qualify';
 
 const Navigator = (): React.ReactElement => {
 
@@ -13,6 +14,7 @@ const Navigator = (): React.ReactElement => {
     <Routes>
       {/* PUBLIC ROUTES */}
       <Route path={ROUTES.HOME} element={<Groups />} />
+      <Route path={ROUTES.QUALIFYINGS} element={<Qualifying />} />
       
       {/*
       <Route path={ROUTES.LOGIN} element={<Login />} />

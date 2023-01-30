@@ -1,9 +1,5 @@
 import React, { ReactElement, useState } from 'react';
 import './styles.scss'
-
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
 import ResponsiveMenu from '../../components/menu/menu'
 import Group from './group';
 
