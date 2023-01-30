@@ -1,0 +1,60 @@
+{
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/v1/user/profile": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "tags": [
+                    "user"
+                ]
+            }
+        },
+        "/v1/user/login": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "tags": [
+                    "user"
+                ]
+            }
+        }
+    },
+    "openapi": "3.0.0",
+    "components": {
+        "schemas": {
+            "UserProfile": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "picture": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "email",
+                    "picture"
+                ]
+            }
+        }
+    }
+}
