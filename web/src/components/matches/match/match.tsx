@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import { CircleFlag } from 'react-circle-flags'
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MilitaryTechRoundedIcon from '@mui/icons-material/MilitaryTechRounded';
 import CheckIcon from '@mui/icons-material/Check';
 import { getMember } from '../../../network/services/match/match.services';
 
@@ -54,7 +54,9 @@ const Match: React.FC<IMatchesProps> = ({ match, ...props }): ReactElement => {
                 <strong>{match.date}</strong>
                 :new Date(match.date).toLocaleDateString('es-es', { weekday:"long", year:"numeric", month:"short", day:"numeric", hour: "2-digit", minute: "2-digit"}) 
               }</Typography></span>
-              {<span className='title'><Typography fontSize={11}>{match.group}</Typography></span>}
+              {/*<span className='title'><Typography fontSize={11}>{match.group}</Typography></span>*/}
+              {match.group == 'GOLD' && <div style={{color:"#FFD700"}}><MilitaryTechRoundedIcon/>  </div>}
+              {match.group == 'SILVER' && <div style={{color:"#B5B7BB"}}><MilitaryTechRoundedIcon/>  </div> }
           </div>
           <div className='player'>
             <div className='img'>
