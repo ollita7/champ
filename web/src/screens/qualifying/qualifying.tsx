@@ -48,7 +48,7 @@ const Qualifying: React.FC<IQualifyingProps> = ({ ...props }): ReactElement => {
         newStage = step === 1? 'F' : 'QF';
         break;
       case 'F':
-        newStage = step === 1? 'F' : 'QF';
+        newStage = step === 1? 'F' : 'SF';
         break;
     }
     setStage(newStage);
