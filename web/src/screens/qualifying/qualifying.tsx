@@ -21,7 +21,7 @@ export interface IQualifyingProps {
 }
 
 const STAGES = {
-  "QF": {order:3, title: "Cuartos de finales", icon: DensityLargeSharpIcon},
+  "QF": {order:3, title: "Cuartos de final", icon: DensityLargeSharpIcon},
   "SF": {order: 2, title: "Semifinales", icon: DensitySmallSharpIcon},
   "F": {order: 1, title: "Final", icon: EmojiEventsIcon},
 }
