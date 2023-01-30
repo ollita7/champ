@@ -49,14 +49,16 @@ const Match: React.FC<IMatchesProps> = ({ match, ...props }): ReactElement => {
     return (<div className={disable ? 'match disabled': 'match'} key={match.id} >
         <Item elevation={4} >
           <div className='details'>
+            {match.group == 'GOLD' && <div style={{color:"#FFD700"}}><MilitaryTechRoundedIcon/>  </div>}
+            {match.group == 'SILVER' && <div style={{color:"#B5B7BB"}}><MilitaryTechRoundedIcon/>  </div> }
+            {(match.group != 'GOLD' && match.group!== 'SILVER') && <span className='title'><Typography fontSize={11}>{match.group}</Typography></span>}
             <span className='date'><Typography>
               {match.date === 'TBD' ?
                 <strong>{match.date}</strong>
                 :new Date(match.date).toLocaleDateString('es-es', { weekday:"long", year:"numeric", month:"short", day:"numeric", hour: "2-digit", minute: "2-digit"}) 
               }</Typography></span>
-              {/*<span className='title'><Typography fontSize={11}>{match.group}</Typography></span>*/}
-              {match.group == 'GOLD' && <div style={{color:"#FFD700"}}><MilitaryTechRoundedIcon/>  </div>}
-              {match.group == 'SILVER' && <div style={{color:"#B5B7BB"}}><MilitaryTechRoundedIcon/>  </div> }
+              
+             
           </div>
           <div className='player'>
             <div className='img'>

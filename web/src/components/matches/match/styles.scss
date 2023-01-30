@@ -5,10 +5,12 @@
   padding: 0 16px 16px 16px;
   .details{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    align-items: center;
     .date{
       font-weight: 300;
     }
