@@ -18,9 +18,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export interface IMatchesProps {
   match: any;
+  disabled?: boolean;
 }
 
-const Match: React.FC<IMatchesProps> = ({ match, ...props }): ReactElement => {
+const Match: React.FC<IMatchesProps> = ({ match, disabled = false, ...props }): ReactElement => {
 
   const renderResult = (result, player) => {
     if (result){
@@ -80,7 +81,7 @@ const Match: React.FC<IMatchesProps> = ({ match, ...props }): ReactElement => {
 
   return (
     <>
-      {renderMatch(match)}
+      {renderMatch(match, disabled)}
     </>
   )
 }

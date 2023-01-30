@@ -38,7 +38,7 @@ const Matches: React.FC<IMatchesProps> = ({ group, ...props }): ReactElement => 
 
   return (
     <div className='matches'>
-      {defined_matches.map(match => <Match match={match}/>)}
+      {defined_matches.map(match => <Match match={match} />)}
       {tbd_matches.length > 0 &&
         <Typography>
           <div className='more-less' onClick={() => setExpanded(!expanded)}>
@@ -49,7 +49,7 @@ const Matches: React.FC<IMatchesProps> = ({ group, ...props }): ReactElement => 
       }
       {expanded &&
         <div className='expand'>
-          {tbd_matches.map(match => <Match match={match}/>)}
+          {tbd_matches.map(match => <Match match={match} disabled={true}/>)}
         </div>
       }
     </div>
