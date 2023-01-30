@@ -6,7 +6,7 @@ import ProtectedRoute from './protectedRoute'
 import { ROUTES } from './constants';
 import { Groups } from '../screens/groups';
 import { NotFound } from '../screens/notfound';
-import { Qualifying } from '../screens/qualify';
+import { Qualifying } from '../screens/qualifying';
 
 const Navigator = (): React.ReactElement => {
 

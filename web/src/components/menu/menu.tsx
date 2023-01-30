@@ -39,7 +39,7 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
 
   return (
     <div className='menu'>
-      <AppBar position="static" className='header'>
+      <AppBar position="sticky" className='header'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

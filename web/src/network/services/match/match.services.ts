@@ -47,10 +47,21 @@ const calculateData = (index, result): any => {
   return data;
 }
 
-const getMember = (groupName: string, memberName: string): any => {
-  const group = groups.tournament.groups.find(g => g.name == groupName);
-  const member =  group?.members.find(m => m.name == memberName);
+const getMember = (memberName: string): any => {
+  let member: any | null = null;
+  groups.tournament.groups.forEach(group => {
+    const aux_member = group?.members.find(m => m.name == memberName);
+    if (aux_member) {
+      member = aux_member;
+      return;
+    }
+  });
   return member;
 }
 
-export {getStandings, getMember}
+const getQualifyings = (cup: string, stage: string):Array<any> => {
+  const matches = matchesData.matches.filter(m => m.group == cup && m.stage == stage);
+  return matches;
+}
+
+export {getStandings, getMember, getQualifyings}

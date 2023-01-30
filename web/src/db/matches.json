@@ -370,6 +370,118 @@
       "group":"GRUPO D", 
       "player_1": {"name": "J. Vazquez"}, 
       "player_2": {"name": "G. Menendez"}
+    },
+    {  
+      "id": 51,
+      "date": "TBD",
+      "group": "GOLD", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 52,
+      "date": "TBD",
+      "group": "GOLD", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 53,
+      "date": "TBD",
+      "group": "GOLD", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 54,
+      "date": "TBD",
+      "group": "GOLD", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 55,
+      "date": "TBD",
+      "group": "GOLD", 
+      "stage": "SF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 56,
+      "date": "TBD",
+      "group": "GOLD", 
+      "stage": "SF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 57,
+      "date": "TBD",
+      "group": "GOLD", 
+      "stage": "F",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 58,
+      "date": "TBD",
+      "group": "SILVER", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 59,
+      "date": "TBD",
+      "group": "SILVER", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 60,
+      "date": "TBD",
+      "group": "SILVER", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 61,
+      "date": "TBD",
+      "group": "SILVER", 
+      "stage": "QF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 62,
+      "date": "TBD",
+      "group": "SILVER", 
+      "stage": "SF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 63,
+      "date": "TBD",
+      "group": "SILVER", 
+      "stage": "SF",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
+    },
+    {  
+      "id": 64,
+      "date": "TBD",
+      "group": "SILVER", 
+      "stage": "F",
+      "player_1": {"name": "TBD"}, 
+      "player_2": {"name": "TBD"}
     }
   ]
 }
