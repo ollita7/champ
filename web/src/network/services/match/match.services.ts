@@ -21,6 +21,7 @@ const getStandings = (groupName: string): Array<IStanding> => {
       .map(m => {
         const data = calculateData(m.player_1.name == member.name ? 0 : 1, m.result)
         row.sf += data.sf;
+        row.gf += data.gf;
         row.pts += data.pts;
       });
     row.pj = result.length;
