@@ -10,7 +10,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/logo_white.svg';
+import Atpe from '../../assets/atpe.svg';
 import { ROUTES } from '../../navigation/constants';
 
 import './styles.scss'
@@ -53,6 +54,9 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
               >
                 <MenuIcon />
               </IconButton>
+              <div className='atpe'>
+                <img src={Atpe} alt="logo" />
+              </div>
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}

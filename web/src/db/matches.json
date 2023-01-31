@@ -152,7 +152,12 @@
       "date": "01/31/2023 15:00",
       "group":"GRUPO B", 
       "player_1": {"name": "G. Gorg"}, 
-      "player_2": {"name": "G. Fernandez"}
+      "player_2": {"name": "G. Fernandez"},
+      "result": {
+        "set_1": {"games": [6,2], "tie": false},
+        "set_2": {"games": [6,2], "tie": false},
+        "winner": 0
+      }
     },
     { 
       "id": 23,

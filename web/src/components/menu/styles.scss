@@ -4,13 +4,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #cbcccd;
+    background: #00AEEF;
     img{
-      height: 100px;
-      background: #cbcccd;
+      height: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background: #00AEEF;
     }
   }
   .header{
     background-color: black;
+    .atpe{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: -58px;
+      img{
+        width: 250px;
+      }
+    }
   }
 }
