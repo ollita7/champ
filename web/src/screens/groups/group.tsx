@@ -87,6 +87,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                     <StyledTableCell></StyledTableCell>
                     <StyledTableCell>PJ</StyledTableCell>
                     <StyledTableCell>SF</StyledTableCell>
+                    <StyledTableCell>GF</StyledTableCell>
                     <StyledTableCell>P</StyledTableCell>
                   </TableRow>
                 </TableHead>
@@ -105,6 +106,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                       </StyledTableCell>
                       <StyledTableCell component="th" scope="row">{s.pj}</StyledTableCell>
                       <StyledTableCell component="th" scope="row">{s.sf}</StyledTableCell>
+                      <StyledTableCell component="th" scope="row">{s.gf}</StyledTableCell>
                       <StyledTableCell component="th" scope="row">{s.pts}</StyledTableCell>
                     </StyledTableRow>
                   ))}

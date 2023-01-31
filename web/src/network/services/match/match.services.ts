@@ -4,6 +4,7 @@ import matchesData from '../../../db/matches.json';
 export interface IStanding{
   pj: number;
   sf: number;
+  gf: number;
   pts: number;
   member: any;
 }
@@ -13,7 +14,7 @@ const getStandings = (groupName: string): Array<IStanding> => {
   const group = groups.tournament.groups.find(g => g.name == groupName)
   const standings: Array<IStanding> = [];
   group?.members.forEach(member => {
-    const row: IStanding = {pj: 0, sf: 0, pts: 0, member}
+    const row: IStanding = {pj: 0, sf: 0, pts: 0, gf: 0, member}
     const result = groupMatches
       .filter(gm => (gm.player_1.name === member.name || gm.player_2.name === member.name ) && gm.result)
     const statistic = result
@@ -25,22 +26,27 @@ const getStandings = (groupName: string): Array<IStanding> => {
     row.pj = result.length;
     standings.push(row);
   });
-  return standings.sort((a, b) => b.pts - a.pts || b.sf - a.sf);
+  return standings.sort((a, b) => b.pts - a.pts || b.sf - a.sf || b.gf - a.gf);
 }
 
 const calculateData = (index, result): any => {
   const data = {
     pts: result.winner == index,
-    sf: 0
+    sf: 0, 
+    gf: 0
   }
   switch (index){
     case 0:
       data.sf += result.set_1.games[0] > result.set_1.games[1] ? 1 : -1;
+      data.gf += result.set_1.games[0] > result.set_1.games[1] ? result.set_1.games[0] : -result.set_1.games[0];
       data.sf += result.set_2.games[0] > result.set_2.games[1] ? 1 : -1;
+      data.gf += result.set_2.games[0] > result.set_2.games[1] ? result.set_2.games[0] : -result.set_2.games[0];
       break;
     case 1:
       data.sf += result.set_1.games[0] < result.set_1.games[1] ? 1 : -1;
+      data.gf += result.set_1.games[0] < result.set_1.games[1] ? result.set_1.games[0] : -result.set_1.games[0];
       data.sf += result.set_2.games[0] < result.set_2.games[1] ? 1 : -1;
+      data.gf += result.set_2.games[0] < result.set_2.games[1] ? result.set_2.games[0] : -result.set_2.games[0];
       break;
   }
   data.sf += result.super? data.pts ? 1: -1 : 0;
