@@ -220,7 +220,7 @@
     },
     { 
       "id": 30,
-      "date": "TBD",
+      "date": "02/01/2023",
       "group":"GRUPO C", 
       "player_1": {"name": "J. Van Kerckhoven"}, 
       "player_2": {"name": "M. Coore"}
@@ -241,14 +241,14 @@
     },
     { 
       "id": 33,
-      "date": "TBD",
+      "date": "02/02/2023",
       "group":"GRUPO C", 
       "player_1": {"name": "M. Coore"}, 
       "player_2": {"name": "I. Veiga"}
     },
     { 
       "id": 34,
-      "date": "TBD",
+      "date": "02/02/2023",
       "group":"GRUPO C", 
       "player_1": {"name": "M. Coore"}, 
       "player_2": {"name": "R. Ferreri"}
