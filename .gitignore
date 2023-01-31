@@ -2,3 +2,6 @@ app/node_modules/
 web/node_modules/
 web/.env
 app/.env
+api/.env
+api/node_modules
+api/dist
