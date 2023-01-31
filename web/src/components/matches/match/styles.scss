@@ -1,5 +1,9 @@
 .match{
+  > div{
+    border-top: 3px solid #0091d2;
+  }
   &.disabled > div{
+    border-top: none;
     background: #e4e4e4;
   }
   padding: 0 16px 16px 16px;
