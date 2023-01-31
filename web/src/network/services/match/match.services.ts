@@ -46,8 +46,8 @@ const calculateData = (index, result): any => {
       data.sf += result.set_2.games[0] < result.set_2.games[1] ? 1 : -1;
       break;
   }
-  data.gf += result.set_1.games[0] > result.set_1.games[1] ? (result.set_1.games[0] - result.set_1.games[1]) : (result.set_1.games[1] - result.set_1.games[0]);
-  data.gf += result.set_2.games[0] > result.set_2.games[1] ? (result.set_2.games[0] - result.set_2.games[1]) : (result.set_2.games[1] - result.set_2.games[0]);
+  data.gf += result.set_1.games[index] - result.set_1.games[index ? 0: 1];
+  data.gf += result.set_2.games[index] - result.set_2.games[index ? 0 : 1];
   data.sf += result.super? data.pts ? 1: -1 : 0;
   return data;
 }

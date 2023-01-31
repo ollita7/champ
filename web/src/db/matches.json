@@ -335,8 +335,8 @@
       "player_1": {"name": "J. Echavarria"}, 
       "player_2": {"name": "A. Llambias"},
       "result": {
-        "set_1": {"games": [6,3], "tie": false, "tie_result": [8, 6]},
-        "set_2": {"games": [4,6], "tie": false, "tie_result": [6, 8]},
+        "set_1": {"games": [6,4], "tie": false, "tie_result": [8, 6]},
+        "set_2": {"games": [3,6], "tie": false, "tie_result": [6, 8]},
         "super": [10, 8],
         "winner": 0
       }
