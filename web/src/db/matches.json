@@ -166,7 +166,12 @@
       "date": "01/30/2023 17:00",
       "group":"GRUPO B", 
       "player_1": {"name": "M. Marella"}, 
-      "player_2": {"name": "G. Fernandez"}
+      "player_2": {"name": "G. Fernandez"},
+      "result": {
+        "set_1": {"games": [6,1], "tie": false},
+        "set_2": {"games": [6,1], "tie": false},
+        "winner": 0
+      }
     },
     {
       "id": 25,
@@ -271,7 +276,7 @@
     },
     {  
       "id": 38,
-      "date": "TBD",
+      "date": "02/01/2023 19:00",
       "group":"GRUPO D", 
       "player_1": {"name": "L. Viola"}, 
       "player_2": {"name": "A. Llambias"}
