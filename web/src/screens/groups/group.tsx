@@ -20,10 +20,7 @@ import { getStandings } from '../../network/services/match/match.services';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   position: 'relative',
-  [`&.${tableCellClasses.head}`]: {
-    //backgroundColor: '#464646',
-    //color: theme.palette.common.white,
-  },
+  padding: '16px 5px',
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
   },
@@ -88,7 +85,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                     <StyledTableCell>PJ</StyledTableCell>
                     <StyledTableCell>SF</StyledTableCell>
                     <StyledTableCell>GF</StyledTableCell>
-                    <StyledTableCell>P</StyledTableCell>
+                    <StyledTableCell>PG</StyledTableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody className='table'>
@@ -107,7 +104,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
                       <StyledTableCell component="th" scope="row">{s.pj}</StyledTableCell>
                       <StyledTableCell component="th" scope="row">{s.sf}</StyledTableCell>
                       <StyledTableCell component="th" scope="row">{s.gf}</StyledTableCell>
-                      <StyledTableCell component="th" scope="row">{s.pts}</StyledTableCell>
+                      <StyledTableCell component="th" scope="row"><strong>{s.pts}</strong></StyledTableCell>
                     </StyledTableRow>
                   ))}
                 </TableBody>

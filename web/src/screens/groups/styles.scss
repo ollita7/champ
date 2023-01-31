@@ -1,5 +1,5 @@
 .groups {
-  margin: 20px;
+  margin: 5px;
   .breadcrumbs{
     padding-bottom: 40px;
   }
@@ -9,20 +9,20 @@
       .table-row{
         &:nth-child(1) th:nth-child(1)::before, &:nth-child(2) th:nth-child(1)::before {
           content:'';
-          width: 5px;
+          width: 3px;
           background:#FFD700;
           position: absolute;
-          left: 5px;
+          left: 0;
           top: 10%;
           height: 80%;
           border-radius: 25px;
         }
         &:nth-child(3) th:nth-child(1)::before, &:nth-child(4) th:nth-child(1)::before {
           content:'';
-          width: 5px;
+          width: 3px;
           background:#B5B7BB;
           position: absolute;
-          left: 5px;
+          left: 0;
           top: 10%;
           height: 80%;
           border-radius: 25px;
