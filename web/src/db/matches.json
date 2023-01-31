@@ -225,9 +225,9 @@
     },
     { 
       "id": 30,
-      "date": "02/01/2023",
+      "date": "02/01/2023 14:00",
       "group":"GRUPO C", 
-      "player_1": {"name": "J. Van Kerckhoven 14:00"}, 
+      "player_1": {"name": "J. Van Kerckhoven"}, 
       "player_2": {"name": "M. Coore"}
     },
     { 
@@ -253,7 +253,7 @@
     },
     { 
       "id": 34,
-      "date": "02/02/2023 17:00",
+      "date": "02/03/2023 17:00",
       "group":"GRUPO C", 
       "player_1": {"name": "M. Coore"}, 
       "player_2": {"name": "R. Ferreri"}
