@@ -72,8 +72,8 @@
     },
     {
       "id": 11,
-      "date": "TBD",
-      "group":"02/02/2023 10:00", 
+      "date": "02/02/2023 10:00",
+      "group":"GRUPO A", 
       "player_1": {"name": "I. Moro"}, 
       "player_2": {"name": "F. Ferrero"}
     },
