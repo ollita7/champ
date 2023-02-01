@@ -22,6 +22,7 @@ import { mdiWhiteBalanceAuto } from '@mdi/js';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   position: 'relative',
   padding: '16px 5px',
+  textAlign: 'center',
   color: 'white',
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
