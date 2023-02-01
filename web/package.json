@@ -38,6 +38,7 @@
     "react-hot-toast": "^2.2.0",
     "react-native-blob-util": "^0.17.1",
     "react-query": "^3.34.16",
+    "react-read-pdf": "^2.0.9",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "sass-loader": "^12.6.0",
