@@ -9,7 +9,7 @@
     },
     {
       "id": 2,
-      "date": "TBD", 
+      "date": "02/07/2023 17:00", 
       "group":"GRUPO A", 
       "player_1": {"name": "S. Ferro"},
       "player_2": {"name": "I. Moro"}
@@ -364,7 +364,7 @@
     },
     {  
       "id": 49,
-      "date": "02/06/2023",
+      "date": "02/06/2023 17:00",
       "group":"GRUPO D", 
       "player_1": {"name": "A. Llambias"}, 
       "player_2": {"name": "G. Menendez"}
