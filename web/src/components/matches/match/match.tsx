@@ -56,7 +56,7 @@ const Match: React.FC<IMatchesProps> = ({ match, disabled = false, ...props }): 
             <span className='date'><Typography>
               {match.date === 'TBD' ?
                 <strong>{match.date}</strong>
-                :new Date(match.date).toLocaleDateString('es-es', { weekday:"long", month:"short", day:"numeric", hour: "2-digit", minute: "2-digit"}) 
+                :new Date(match.date).toLocaleDateString('es-es', { weekday:"long", month:"long", day:"numeric", hour: "2-digit", minute: "2-digit"}) 
               }</Typography></span>
               
              
