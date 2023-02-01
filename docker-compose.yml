@@ -9,7 +9,7 @@ services:
     environment:
       - MONGO_INITDB_DATABASE=admin
       - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=n1rvanA!
+      - MONGO_INITDB_ROOT_PASSWORD=*****
   topology:
     image: registry.gitlab.com/cavepot/tectonic/prod:latest
     #env_file:
