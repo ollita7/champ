@@ -8,7 +8,7 @@ const Terms: React.FC = ({ ...props }): ReactElement => {
     <div className='terms'>
       <ResponsiveMenu/>
       <div className='pdf'>
-        <MobilePDFReader url="http://ocean-tour.netlify.app/reglamento.pdf"/>
+        <MobilePDFReader url="https://ocean-tour.netlify.app/reglamento.pdf"/>
       </div>
     </div>
   );
