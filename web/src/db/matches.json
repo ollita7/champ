@@ -82,7 +82,7 @@
       "result": {
         "set_1": {"games": [6,1], "tie": false},
         "set_2": {"games": [6,0], "tie": false},
-        "winner": 0
+        "winner": 1
       }
     },
     { 
