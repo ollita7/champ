@@ -14,13 +14,7 @@
       "player_1": {"name": "S. Ferro"},
       "player_2": {"name": "I. Moro"}
     },
-    {
-      "id": 3,
-      "date": "TBD", 
-      "group":"GRUPO A", 
-      "player_1": {"name": "S. Ferro"}, 
-      "player_2": {"name": "G. Pazos"}
-    },
+    
     {
       "id": 4,
       "date": "TBD", 
@@ -47,13 +41,7 @@
         "winner": 0
       }
     },
-    {
-      "id": 7,
-      "date": "TBD",
-      "group":"GRUPO A", 
-      "player_1":  {"name": "D. Ponte"}, 
-      "player_2":  {"name": "G. Pazos"}
-    },
+    
     {
       "id": 8,
       "date": "TBD",
@@ -68,13 +56,7 @@
       "player_1": {"name": "D. Ponte"},
        "player_2": {"name": "C. Obregon"}
     },
-    {
-      "id": 10,
-      "date": "TBD",
-      "group":"GRUPO A", 
-      "player_1": {"name": "I. Moro"}, 
-      "player_2": {"name": "G. Pazos"}
-    },
+   
     {
       "id": 11,
       "date": "02/02/2023 10:00",
@@ -89,20 +71,8 @@
       "player_1": {"name": "I. Moro"}, 
       "player_2": {"name": "C. Obregon"}
     },
-    {
-      "id": 13,
-      "date": "TBD",
-      "group":"GRUPO A", 
-      "player_1": {"name": "G. Pazos"},
-      "player_2": {"name": "F. Ferrero"}
-    },
-    {
-      "id": 14,
-      "date": "TBD",
-      "group":"GRUPO A", 
-      "player_1": {"name": "G. Pazos"}, 
-      "player_2": {"name": "C. Obregon"}
-    },
+    
+    
     {
       "id": 15,
       "date": "01/31/2023 16:00",

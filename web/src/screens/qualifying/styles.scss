@@ -1,7 +1,7 @@
 .qualifying{
   margin: 20px;
   .select-cup{
-    background-color: white;
+    //background-color: white;
   }
   .select-stage{
     display: flex;
@@ -15,7 +15,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border: 1px solid #dedcdc;
+      border: 1px solid #0091d3;
       border-radius: 10px;
       margin: 0 20px;
       min-width: 50px;
@@ -27,6 +27,7 @@
   }
   .matches{
     background-color: transparent;
+    margin: 0 -16px;
   }
   .title-menu{
     padding: 0 15px;
