@@ -1,3 +1,11 @@
 .terms{
   margin: 20px;
+  .pdf{
+    display: flex;
+    flex-direction: column;
+    height: 2023px;
+    .iframe{
+      flex-grow: 1; border: none; margin: 0; padding: 0; 
+    }
+  }
 }
