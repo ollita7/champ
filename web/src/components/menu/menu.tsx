@@ -20,7 +20,7 @@ const pages = [
   {title: 'Grupos', link: ROUTES.HOME}, 
   {title: 'Cruces', link: ROUTES.QUALIFYINGS},
   {title: 'Ranking', link: ROUTES.RANKING},
-  {title: 'Reglamento', link: 'reglamento.pdf'}
+  {title: 'Reglamento', link: ROUTES.TERMS}
 ];
 
 export interface IResponsiveMenuProps {
@@ -36,9 +36,7 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
 
   const handleCloseNavMenu = (page: string | null = null) => {
     setAnchorElNav(null);
-    if(page === 'reglamento.pdf')
-        window.open(page);
-    else if (page) navigate(page);
+    if (page) navigate(page);
   };
 
   return (
