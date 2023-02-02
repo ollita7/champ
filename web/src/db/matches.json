@@ -62,7 +62,12 @@
       "date": "02/02/2023 10:00",
       "group":"GRUPO A", 
       "player_1": {"name": "I. Moro"}, 
-      "player_2": {"name": "F. Ferrero"}
+      "player_2": {"name": "F. Ferrero"},
+      "result": {
+        "set_1": {"games": [6,2], "tie": false},
+        "set_2": {"games": [6,1], "tie": false},
+        "winner": 0
+      }
     },
     {
       "id": 12,
