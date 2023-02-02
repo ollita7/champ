@@ -21,6 +21,7 @@ export class ResponseCode {
     static ERROR = 1;
     static WARNING = 2;
     static BAD_REQUEST = 400;
+    static UNAUTHORIZED = 401;
 }
 
 export class EmailStatus {
