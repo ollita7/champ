@@ -6,6 +6,7 @@ import {
   getKiwiEmitter,
 } from "kiwi-server";
 import { UserController } from "./controllers/user.controller";
+import { LoginController } from "./controllers/login.controller";
 import { UserService } from "./services/user.services";
 import { HeadersMiddleware } from "./middlewares/headers";
 import { LogService, LEVELS, ILog } from "./services/log.services";
@@ -36,7 +37,8 @@ async function validateAuthentication(
 
 const options: IKiwiOptions = {
   controllers: [
-    UserController
+    UserController,
+    LoginController
   ],
   authorization: validateAuthentication,
   middlewares: [HeadersMiddleware],

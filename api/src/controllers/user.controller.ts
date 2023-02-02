@@ -1,10 +1,10 @@
-import { JsonController, Get, Post, Authorize, Body} from 'kiwi-server';
+import { JsonController, Get, Post, Authorize, Body, Param} from 'kiwi-server';
 import { GenericModel } from '../models/generic.model';
 import { ResponseCode } from '../sdk/constants';
 import { Response } from '../sdk/response';
 import { UserService } from '../services/user.services';
 
-//@Authorize()
+@Authorize()
 @JsonController('/user')
 export class UserController {
 
@@ -22,10 +22,10 @@ export class UserController {
     return new Response(ResponseCode.OK,'',user);
   }
 
-  @Post('/login')
-  public async post(@Body() request: GenericModel){
-    let user = request.userProfile;
-    let token = await this.userService.logIn(user); 
-    return new Response(ResponseCode.OK,'',token);
+  @Get('/:name')
+  public async getUser(@Param('name') name: string){    
+    let result = await this.userService.getUser(name); 
+    return new Response(ResponseCode.OK,'',result);
   }
+
 }

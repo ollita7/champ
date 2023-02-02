@@ -18,7 +18,30 @@
                 ]
             }
         },
-        "/v1/user/login": {
+        "/v1/user/:name": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    }
+                ],
+                "tags": [
+                    "user"
+                ]
+            }
+        },
+        "/v1/login/": {
             "post": {
                 "consumes": [
                     "application/json"
@@ -28,7 +51,7 @@
                 ],
                 "parameters": [],
                 "tags": [
-                    "user"
+                    "login"
                 ],
                 "requestBody": {
                     "content": {
@@ -54,12 +77,16 @@
                     },
                     "email": {
                         "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
                     }
                 },
                 "type": "object",
                 "required": [
                     "name",
-                    "email"
+                    "email",
+                    "password"
                 ]
             }
         }

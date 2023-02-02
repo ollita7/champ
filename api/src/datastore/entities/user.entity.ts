@@ -2,10 +2,10 @@
 import { ObjectId } from "mongodb";
 import { Entity, ObjectIdColumn, Column } from "typeorm";;
 
-@Entity('users')
+@Entity('user')
 export class User {
     @ObjectIdColumn()
-    id: ObjectId;
+    _id: ObjectId;
 
     @Column()
     email: string;
@@ -21,4 +21,10 @@ export class User {
 
     @Column()
     picture: string;
+
+    @Column()
+    password: string;
+
+    @Column()
+    country: string;
 }
