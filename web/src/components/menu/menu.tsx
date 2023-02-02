@@ -36,7 +36,9 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
 
   const handleCloseNavMenu = (page: string | null = null) => {
     setAnchorElNav(null);
-    if (page) navigate(page);
+    if (page && page == '/terms')
+      window.open('http://ocean-tour.netlify.app/reglamento.pdf');
+    else if (page) navigate(page);
   };
 
   return (
