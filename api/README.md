@@ -21,7 +21,7 @@ For more information about it [https://typeorm.io/](https://typeorm.io/)
 
 ### Create migrations
 ```
-typeorm migration:create -n <migration_name>
+typeorm migration:create <migration_name>
 ```
 
 ### Run migrations

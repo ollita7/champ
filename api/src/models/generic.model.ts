@@ -7,5 +7,6 @@ export class GenericModel {
 export class UserProfile {
   @IsString() name: string;
   @IsString() email: string;
+  @IsString() password: string;
   //@IsString() picture: string;
 }
