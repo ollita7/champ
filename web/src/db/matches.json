@@ -261,7 +261,12 @@
       "date": "02/03/2023 17:00",
       "group":"GRUPO C", 
       "player_1": {"name": "M. Coore"}, 
-      "player_2": {"name": "R. Ferreri"}
+      "player_2": {"name": "R. Ferreri"},
+      "result": {
+        "set_1": {"games": [6,0], "tie": false},
+        "set_2": {"games": [6,4], "tie": false},
+        "winner": 0
+      }
     },
     { 
       "id": 35,
@@ -315,7 +320,13 @@
       "date": "TBD",
       "group":"GRUPO D", 
       "player_1": {"name": "M. Buzik"}, 
-      "player_2": {"name": "J. Echavarria"}
+      "player_2": {"name": "J. Echavarria"},
+      "result": {
+        "set_1": {"games": [5,7], "tie": false},
+        "set_2": {"games": [6,2], "tie": false},
+        "super": [10,7],
+        "winner": 0
+      }
     },
     {  
       "id": 42,
