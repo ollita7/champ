@@ -156,7 +156,7 @@
     },
     { 
       "id": 23,
-      "date": "02/09/2023",
+      "date": "02/09/2023 ",
       "group":"GRUPO B", 
       "player_1": {"name": "M. Marella"}, 
       "player_2": {"name": "A. Chifflet"}
