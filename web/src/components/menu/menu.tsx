@@ -14,7 +14,7 @@ import Logo from '../../assets/logo_white.svg';
 import Atpe from '../../assets/atpe.svg';
 import { ROUTES } from '../../navigation/constants';
 
-import './styles.scss'
+import './styles.scss';
 
 const pages = [
   {title: 'Grupos', link: ROUTES.HOME}, 
