@@ -130,7 +130,7 @@
     },
     { 
       "id": 20,
-      "date": "02/09/2023 15:00",
+      "date": "02/10/2023 15:00",
       "group":"GRUPO B", 
       "player_1": {"name": "G. Gorg"}, 
       "player_2": {"name": "M. Marella"}
@@ -156,7 +156,7 @@
     },
     { 
       "id": 23,
-      "date": "TBD",
+      "date": "02/09/2023",
       "group":"GRUPO B", 
       "player_1": {"name": "M. Marella"}, 
       "player_2": {"name": "A. Chifflet"}
