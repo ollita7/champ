@@ -98,7 +98,7 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
             <div className='atpe'>
               <img src={Atpe} alt="logo" />
             </div>
-            <Button color="inherit" onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>
+            {/*<Button color="inherit" onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>*/}
           </Toolbar>
         </Container>
       </AppBar>

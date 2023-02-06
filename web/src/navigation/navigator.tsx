@@ -9,19 +9,22 @@ import { NotFound } from '../screens/notfound';
 import { Qualifying } from '../screens/qualifying';
 import { Ranking } from '../screens/ranking';
 import { Terms } from '../screens/terms';
+import { Layout } from './layout';
 
 const Navigator = (): React.ReactElement => {
 
   return (
     <Routes>
       {/* PUBLIC ROUTES */}
-      <Route path={ROUTES.HOME} element={<Groups />} />
-      <Route path={ROUTES.QUALIFYINGS} element={<Qualifying />} />
-      <Route path={ROUTES.RANKING} element={<Ranking />} />
-      <Route path={ROUTES.TERMS} element={<Terms />} />
-      <Route path={ROUTES.LOGIN} element={<Login />} />
-      {/*
+      <Route element={<Layout></Layout>} >
+        <Route path={ROUTES.HOME} element={<Groups />} />
+        <Route path={ROUTES.QUALIFYINGS} element={<Qualifying />} />
+        <Route path={ROUTES.RANKING} element={<Ranking />} />
+        <Route path={ROUTES.TERMS} element={<Terms />} />
+        <Route path={ROUTES.LOGIN} element={<Login />} />
+      </Route>
       
+      {/*
       <Route path={ROUTES.PAYMENT} element={<Payment />} />
       <Route path={ROUTES.POLICIES} element={<Privacy />} />
       <Route path={ROUTES.TERMS} element={<Terms />} />

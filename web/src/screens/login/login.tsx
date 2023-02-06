@@ -1,5 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { Form, Formik, Field } from "formik";
+import * as Yup from "yup";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
@@ -15,27 +17,69 @@ const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
 
+  const initialValues = {
+    username: '',
+    password: ''
+  };
+
+  const loginSchema = Yup.object().shape({
+    username: Yup.string().required(`Usuario es obligatorio`),
+    password: Yup.string().required(`Password es obligatorio`),
+  });
+
   const handleSuccess = (res) => {
     const id_token = res.getAuthResponse().id_token;
     localStorage.setItem(Config.TOKEN_NAME, id_token);
     navigate(ROUTES.HOME);
   }
 
-  const handleError = (res) => {
-    setError(true);
+  const handleContinue = (values) => {
+    console.log(values);
   }
 
   return (
     <div className='login'>
-      <div className='username'>
-        <TextField id="standard-basic" fullWidth label="Usuario" variant="standard" />
-      </div>
-      <div className='password'>
-        <TextField id="standard-basic" fullWidth label="Password" variant="standard" />
-      </div>
-      <div className='button'>
-        <Button variant="contained">Acceder</Button>
-      </div>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={loginSchema}
+        onSubmit={(values) => {
+          handleContinue(values);
+        }}
+      >
+         {({ 
+          handleBlur,
+          handleChange,
+          errors, 
+          touched, 
+          dirty }) => (
+          <Form>
+            <div className='username'>
+              <TextField 
+                id="username" 
+                fullWidth 
+                label="Usuario" 
+                onBlur={handleBlur}
+                onChange={handleChange}
+                variant="standard"
+                helperText={touched.username ? errors.username : ""}
+                error={touched.username && Boolean(errors.username)}/>
+            </div>
+            <div className='password'>
+              <TextField 
+                id="password"
+                fullWidth label="Password" 
+                variant="standard" 
+                onBlur={handleBlur}
+                onChange={handleChange}
+                helperText={touched.password ? errors.password : ""}
+                error={touched.password && Boolean(errors.password)}/>
+            </div>
+            <div className='button'>
+              <Button variant="contained" type="submit">Acceder</Button>
+            </div>
+         </Form>
+         )}
+      </Formik>
     </div>
   )
 }

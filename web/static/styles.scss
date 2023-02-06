@@ -6,6 +6,9 @@ body{
   #root{
     display: flex;
     flex-direction: column;
+    .layout{
+      margin: 20px;
+    }
   }
   margin: 0;
   background-color: #00aeef;

@@ -27,7 +27,6 @@ const Ranking: React.FC<IRankingProps> = ({ ...props }): ReactElement => {
 
   return (
     <div className='ranking'>
-       <ResponsiveMenu/>
        <h3><Typography>Proximamente</Typography></h3>
     </div>
   )
