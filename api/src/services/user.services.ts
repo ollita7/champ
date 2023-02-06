@@ -22,14 +22,16 @@ export class UserService {
     try {
      
       let repo = await getRepository(User)
-      const user = await repo.findOne({ where: { 'email': payload.email } });     
+      let user = await repo.findOne({ where: { 'email': payload.email } });     
       var password = payload.password;
       var hash = crypto.pbkdf2Sync(password, process.env.JWT_SECRET, 1000, 64, 'sha512').toString('hex');
       var token = null;
       if(hash == user.password) {
         var token = jwt.encode(payload, process.env.JWT_SECRET);
       } 
-      return token
+      user.token = token
+      delete user.password;
+      return user
 
     } catch (ex) {
       console.log(`login error: ${ex}`)

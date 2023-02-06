@@ -27,4 +27,7 @@ export class User {
 
     @Column()
     country: string;
+
+    @Column()
+    tenant_id: number;
 }
