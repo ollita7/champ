@@ -19,8 +19,9 @@ const Navigator = (): React.ReactElement => {
       <Route path={ROUTES.QUALIFYINGS} element={<Qualifying />} />
       <Route path={ROUTES.RANKING} element={<Ranking />} />
       <Route path={ROUTES.TERMS} element={<Terms />} />
-      {/*
       <Route path={ROUTES.LOGIN} element={<Login />} />
+      {/*
+      
       <Route path={ROUTES.PAYMENT} element={<Payment />} />
       <Route path={ROUTES.POLICIES} element={<Privacy />} />
       <Route path={ROUTES.TERMS} element={<Terms />} />

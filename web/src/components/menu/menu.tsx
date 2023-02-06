@@ -20,6 +20,7 @@ const pages = [
   {title: 'Grupos', link: ROUTES.HOME}, 
   {title: 'Cruces', link: ROUTES.QUALIFYINGS},
   {title: 'Ranking', link: ROUTES.RANKING},
+  {title: 'Acceder', link: ROUTES.LOGIN},
   {title: 'Reglamento', link: ROUTES.TERMS}
 ];
 
@@ -57,9 +58,7 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
               >
                 <MenuIcon />
               </IconButton>
-              <div className='atpe'>
-                <img src={Atpe} alt="logo" />
-              </div>
+              
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -96,6 +95,10 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
                 </Button>
               ))}
             </Box>
+            <div className='atpe'>
+              <img src={Atpe} alt="logo" />
+            </div>
+            <Button color="inherit" onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>
           </Toolbar>
         </Container>
       </AppBar>
