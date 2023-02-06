@@ -1,7 +1,11 @@
-import { useQuery } from 'react-query';
-
+import { useQuery, useMutation } from 'react-query';
 import { UserRepository } from "../../repositories/user";
 import {  QUERIES_KEYS } from '../../queryKeys';
+
+export interface ILogin {
+  username?: string;
+  password?: string;
+}
 
 const useGetProfile = (): {
   isLoading: boolean;
@@ -18,4 +22,11 @@ const useGetProfile = (): {
   });
 }
 
-export { useGetProfile }
+const useLogin = () => {
+  const mutation = useMutation((data: ILogin) => {
+    return UserRepository.login(data);
+  });
+  return mutation;
+};
+
+export { useGetProfile, useLogin }

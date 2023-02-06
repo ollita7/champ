@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import './styles.scss'
 import { ROUTES } from '../../navigation/constants';
 import { Config } from '../../utils';
+import { useLogin } from '../../network/services/user/user.service';
 
 export interface ILoginProps {
 
@@ -15,7 +16,7 @@ export interface ILoginProps {
 
 const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
   const navigate = useNavigate();
-  const [error, setError] = useState(false);
+  const mutation = useLogin();
 
   const initialValues = {
     username: '',
@@ -27,13 +28,15 @@ const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
     password: Yup.string().required(`Password es obligatorio`),
   });
 
-  const handleSuccess = (res) => {
-    const id_token = res.getAuthResponse().id_token;
-    localStorage.setItem(Config.TOKEN_NAME, id_token);
-    navigate(ROUTES.HOME);
-  }
-
   const handleContinue = (values) => {
+    mutation.mutate(values, {
+      onSuccess: async (response) => {
+        //const id_token = res.getAuthResponse().id_token;
+        //localStorage.setItem(Config.TOKEN_NAME, id_token);
+        console.log(response)
+        navigate(ROUTES.HOME);
+      },
+    });
     console.log(values);
   }
 
