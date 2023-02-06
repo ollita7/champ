@@ -17,10 +17,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'; 
 import { CircleFlag } from 'react-circle-flags'
 import { getStandings } from '../../network/services/match/match.services';
+import { mdiWhiteBalanceAuto } from '@mdi/js';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   position: 'relative',
   padding: '16px 5px',
+  textAlign: 'center',
+  color: 'white',
+  borderColor: 'black',
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
   },
@@ -74,7 +78,7 @@ const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
     <div className='group' key={group.name}>
       <Card sx={{ minWidth: 275 }}>
         <h2 className='name' >
-          <Typography color="text.primary">{group.name}</Typography>
+          <Typography color="#00aeef">{group.name}</Typography>
           </h2>
         <CardContent>
           <StyledTableContainer>

@@ -5,6 +5,7 @@ enum ROUTES {
   MATCHES = '/matches',
   QUALIFYINGS = '/qualifyings',
   RANKING = '/ranking',
+  TERMS = '/terms',
   WILDCARD = '*',
 }
 

@@ -57,7 +57,7 @@ const Qualifying: React.FC<IQualifyingProps> = ({ ...props }): ReactElement => {
   return (
     <div className='qualifying'>
       <ResponsiveMenu/>
-      <FormControl fullWidth className='select-cup'>
+      <FormControl variant="filled" fullWidth className='select-cup'>
         <InputLabel id="demo-simple-select-label">Copa</InputLabel>
         <Select
           labelId="demo-simple-select-label"

@@ -5,6 +5,9 @@
   }
   .group {
     padding-bottom: 40px;
+    > div {
+      background: #18273a;
+    }
     .table{
       .table-row{
         &:nth-child(1) th:nth-child(1)::before, &:nth-child(2) th:nth-child(1)::before {
@@ -42,7 +45,11 @@
       margin-bottom: -25px;
     }
     .expand-more{
+      .more-icon{
+        color: #00aeef
+      }
       span{
+        color: #00aeef;
         transform:rotate(0deg);
         font-size: 14px;
         transition: none;

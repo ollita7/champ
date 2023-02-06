@@ -14,12 +14,13 @@ import Logo from '../../assets/logo_white.svg';
 import Atpe from '../../assets/atpe.svg';
 import { ROUTES } from '../../navigation/constants';
 
-import './styles.scss'
+import './styles.scss';
 
 const pages = [
   {title: 'Grupos', link: ROUTES.HOME}, 
   {title: 'Cruces', link: ROUTES.QUALIFYINGS},
-  {title: 'Ranking', link: ROUTES.RANKING}
+  {title: 'Ranking', link: ROUTES.RANKING},
+  {title: 'Reglamento', link: ROUTES.TERMS}
 ];
 
 export interface IResponsiveMenuProps {
@@ -35,7 +36,9 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
 
   const handleCloseNavMenu = (page: string | null = null) => {
     setAnchorElNav(null);
-    if (page) navigate(page);
+    if (page && page == '/terms')
+      window.open('http://ocean-tour.netlify.app/reglamento.pdf');
+    else if (page) navigate(page);
   };
 
   return (
