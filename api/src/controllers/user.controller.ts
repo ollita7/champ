@@ -4,14 +4,15 @@ import { ResponseCode } from '../sdk/constants';
 import { Response } from '../sdk/response';
 import { UserService } from '../services/user.services';
 
-@Authorize()
+
 @JsonController('/user')
 export class UserController {
 
   
   constructor(private userService: UserService){
   }
-
+  
+  @Authorize()
   @Get('/profile')
   public async get(request: GenericModel){
     let user = request.userProfile;
@@ -21,11 +22,22 @@ export class UserController {
     // }
     return new Response(ResponseCode.OK,'',user);
   }
-
+  @Authorize()
   @Get('/:name')
   public async getUser(@Param('name') name: string){    
     let result = await this.userService.getUser(name); 
     return new Response(ResponseCode.OK,'',result);
   }
 
+  
+  @Post('/login')
+  public async post(@Body() request: GenericModel){
+    let user = request.userProfile;
+    let auth_user = await this.userService.logIn(user); 
+    if (auth_user != null) {
+      return new Response(ResponseCode.OK,'',auth_user);
+    }else {
+      return new Response(ResponseCode.UNAUTHORIZED,'incorrect user or password',auth_user);
+    }
+  }
 }
