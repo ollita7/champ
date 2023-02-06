@@ -41,7 +41,7 @@
                 ]
             }
         },
-        "/v1/login/": {
+        "/v1/user/login": {
             "post": {
                 "consumes": [
                     "application/json"
@@ -51,7 +51,7 @@
                 ],
                 "parameters": [],
                 "tags": [
-                    "login"
+                    "user"
                 ],
                 "requestBody": {
                     "content": {
