@@ -308,7 +308,7 @@
     },
     {  
       "id": 39,
-      "date": "02/07/2023",
+      "date": "02/07/2023 17:30",
       "group":"GRUPO D", 
       "player_1": {"name": "L. Viola"}, 
       "player_2": {"name": "J. Vazquez"}
@@ -342,7 +342,7 @@
     },
     {  
       "id": 43,
-      "date": "TBD",
+      "date": "02/07/2023 10:00",
       "group":"GRUPO D", 
       "player_1": {"name": "M. Buzik"}, 
       "player_2": {"name": "J. Vazquez"},
