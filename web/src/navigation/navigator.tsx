@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Login } from '../screens/login';
-import { Payment } from '../screens/payment';
 import ProtectedRoute from './protectedRoute'
 import { ROUTES } from './constants';
 import { Groups } from '../screens/groups';

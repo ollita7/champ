@@ -1,18 +1,15 @@
 import { AxiosRequestConfig } from 'axios';
-import { Config } from '../utils/config';
 import toast from 'react-hot-toast';
+import { useGetUser } from '../network/services/user/user.service';
 import { API_STATUS_CODE } from './constants';
-import { getCurrentAccount } from './services/account/account.service';
 
 const injectToken = (config: AxiosRequestConfig): AxiosRequestConfig => {
   let newConfig = { ...config };
 
   try {
-    const token = localStorage.getItem(Config.TOKEN_NAME)
-    const account = getCurrentAccount();
-    if (token && newConfig.headers) {
-      newConfig.headers.Authorization = `Bearer ${token}`;
-      newConfig.headers[Config.ACCOUNT_HEADER] = account?.id;
+    const user = useGetUser();
+    if (user && newConfig.headers) {
+      newConfig.headers.Authorization = `Bearer ${user.token}`;
     }
     return newConfig;
   } catch (error: any) {

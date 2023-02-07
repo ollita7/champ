@@ -1,17 +1,23 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface IProfileState {
+  country: string | null;
   email: string | null;
-  picture: string | null;
-  name: string;
-  accounts: Array<any>;
+  name: string | null;
+  role: string | null;
+  status: string | null;
+  token: string | null;
+  _id: string | null;
 }
 
 const initialState: IProfileState = {
+  country: null,
   email: null,
-  picture: null,
-  name: '',
-  accounts: []
+  name: null,
+  role: null,
+  status: null,
+  token: null,
+  _id: null,
 }
 
 const profileSlice = createSlice({

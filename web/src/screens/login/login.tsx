@@ -1,16 +1,20 @@
 import React, { ReactElement, useState } from 'react';
+import { connect } from "react-redux";
 import { useNavigate, Link } from 'react-router-dom';
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
+
 import './styles.scss'
+import { IStoreDispatchProps } from '../../store/storeComponent';
+import { setProfile } from '../../store/reducers/profile';
 import { ROUTES } from '../../navigation/constants';
 import { Config } from '../../utils';
 import { useLogin } from '../../network/services/user/user.service';
 
-export interface ILoginProps {
+export interface ILoginProps extends IStoreDispatchProps {
 
 }
 
@@ -31,13 +35,11 @@ const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
   const handleContinue = (values) => {
     mutation.mutate(values, {
       onSuccess: async (response) => {
-        //const id_token = res.getAuthResponse().id_token;
-        //localStorage.setItem(Config.TOKEN_NAME, id_token);
-        console.log(response)
+        localStorage.setItem(Config.USER, JSON.stringify(response));
+        props.dispatch(setProfile(response));
         navigate(ROUTES.HOME);
       },
     });
-    console.log(values);
   }
 
   return (
@@ -74,6 +76,7 @@ const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
                 variant="standard" 
                 onBlur={handleBlur}
                 onChange={handleChange}
+                type="password"
                 helperText={touched.password ? errors.password : ""}
                 error={touched.password && Boolean(errors.password)}/>
             </div>
@@ -86,5 +89,4 @@ const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
     </div>
   )
 }
-
-export default Login;
+export default connect()(Login);

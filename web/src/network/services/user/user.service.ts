@@ -1,5 +1,6 @@
 import { useQuery, useMutation } from 'react-query';
 import { UserRepository } from "../../repositories/user";
+import { Config } from '../../../utils/config';
 import {  QUERIES_KEYS } from '../../queryKeys';
 
 export interface ILogin {
@@ -29,4 +30,15 @@ const useLogin = () => {
   return mutation;
 };
 
-export { useGetProfile, useLogin }
+const useGetUser = (): any => {
+  const user = localStorage.getItem(Config.USER);
+  if(user)
+    return JSON.parse(user);
+  return null;
+}
+const useLogout = () => {
+  const user = localStorage.removeItem(Config.USER);
+  
+}
+
+export { useGetProfile, useLogin, useGetUser, useLogout }
