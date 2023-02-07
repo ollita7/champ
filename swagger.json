@@ -41,7 +41,7 @@
                 ]
             }
         },
-        "/v1/login/": {
+        "/v1/user/login": {
             "post": {
                 "consumes": [
                     "application/json"
@@ -51,17 +51,17 @@
                 ],
                 "parameters": [],
                 "tags": [
-                    "login"
+                    "user"
                 ],
                 "requestBody": {
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/GenericModel"
+                                "$ref": "#/components/schemas/LoginIn"
                             }
                         }
                     },
-                    "description": "GenericModel",
+                    "description": "LoginIn",
                     "required": true
                 }
             }
@@ -70,6 +70,40 @@
     "openapi": "3.0.0",
     "components": {
         "schemas": {
+            "UserIn": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "picture": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "email",
+                    "picture"
+                ]
+            },
+            "LoginIn": {
+                "properties": {
+                    "username": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username",
+                    "password"
+                ]
+            },
             "UserProfile": {
                 "properties": {
                     "name": {
