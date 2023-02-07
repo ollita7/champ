@@ -47,7 +47,12 @@
       "date": "02/06/2023 17:00",
       "group":"GRUPO A", 
       "player_1": {"name": "D. Ponte"}, 
-      "player_2": {"name": "F. Ferrero"}
+      "player_2": {"name": "F. Ferrero"},
+      "result": {
+        "set_1": {"games": [6,0], "tie": false},
+        "set_2": {"games": [6,0], "tie": false},
+        "winner": 0
+      }
     },
     {
       "id": 9,
@@ -384,7 +389,12 @@
       "date": "02/06/2023 17:15",
       "group":"GRUPO D", 
       "player_1": {"name": "J. Echavarria"}, 
-      "player_2": {"name": "G. Menendez"}
+      "player_2": {"name": "G. Menendez"},
+      "result": {
+        "set_1": {"games": [6,2], "tie": false},
+        "set_2": {"games": [6,3], "tie": false},
+        "winner": 0
+      }
     },
     {  
       "id": 48,
