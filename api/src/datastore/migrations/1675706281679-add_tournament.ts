@@ -8,14 +8,17 @@ export class addTournament1675706281679 implements MigrationInterface {
     public async up(queryRunner: MongoQueryRunner): Promise<void> {
         let tournament = new Tournament()
         const demo_tournament = JSON.parse(this.demo_tournament);
-        tournament.date = 'Febrero 2023'
-        tournament.name = 'Copa Jorge Mesones'
-        tournament.tenant_id = '1'
+        tournament.date = new Date(2023,2);
+        tournament.name = 'Copa Jorge Mesones';
+        tournament.category = 'MASCULINO A';
+        tournament.category_id = 'MA';
+        tournament.tenant_id = '1';
         let groups = new Array<Group>();
         demo_tournament['tournament']['groups'].forEach(function(value: any){
             let group = new Group()
-            group.color = value['color']
-            group.name = value['name']
+            group.color = value['color'];
+            group.name = value['name'];
+            group.id = group.name.split(' ')[1];
             let teams = new Array<Team>();
             value['members'].forEach(function (t: any) {
                 let team = new Team();

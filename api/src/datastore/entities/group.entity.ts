@@ -9,6 +9,9 @@ export class Group {
     _id: ObjectId;
 
     @Column()
+    id: string;
+
+    @Column()
     name: string;
 
     @Column()

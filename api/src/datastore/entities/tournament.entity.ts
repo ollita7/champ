@@ -9,7 +9,13 @@ export class Tournament {
     _id: ObjectId;
 
     @Column()
-    date: string;
+    category_id: string;
+
+    @Column()
+    date: Date;
+
+    @Column()
+    category: string;
 
     @Column()
     name: string;

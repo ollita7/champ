@@ -12,7 +12,13 @@ export class Match {
     id: string;
 
     @Column()
-    date: string;
+    category_id: string;
+
+    @Column()
+    tournament_id: ObjectId;
+
+    @Column()
+    date: Date;
 
     @Column()
     group: string;
