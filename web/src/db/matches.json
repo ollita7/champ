@@ -345,7 +345,12 @@
       "date": "TBD",
       "group":"GRUPO D", 
       "player_1": {"name": "M. Buzik"}, 
-      "player_2": {"name": "J. Vazquez"}
+      "player_2": {"name": "J. Vazquez"},
+      "result": {
+        "set_1": {"games": [6,0], "tie": false},
+        "set_2": {"games": [6,0], "tie": false},
+        "winner": 0
+      }
     },
     {    
       "id": 44,
@@ -412,7 +417,7 @@
     },
     {  
       "id": 50,
-      "date": "TBD",
+      "date": "02/09/2023 9:00",
       "group":"GRUPO D", 
       "player_1": {"name": "J. Vazquez"}, 
       "player_2": {"name": "G. Menendez"}
