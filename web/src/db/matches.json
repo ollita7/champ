@@ -161,7 +161,7 @@
     },
     { 
       "id": 23,
-      "date": "02/09/2023",
+      "date": "02/09/2023 19:15",
       "group":"GRUPO B", 
       "player_1": {"name": "M. Marella"}, 
       "player_2": {"name": "A. Chifflet"}
@@ -335,7 +335,7 @@
     },
     {  
       "id": 42,
-      "date": "02/11/2023 19:30",
+      "date": "TBD",
       "group":"GRUPO D", 
       "player_1": {"name": "M. Buzik"}, 
       "player_2": {"name": "A. Llambias"}
@@ -410,7 +410,7 @@
     },
     {  
       "id": 49,
-      "date": "02/07/2023 17:00",
+      "date": "02/07/2023 19:00",
       "group":"GRUPO D", 
       "player_1": {"name": "A. Llambias"}, 
       "player_2": {"name": "G. Menendez"}
