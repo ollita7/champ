@@ -333,7 +333,12 @@
       "date": "02/07/2023 17:30",
       "group":"GRUPO D", 
       "player_1": {"name": "L. Viola"}, 
-      "player_2": {"name": "J. Vazquez"}
+      "player_2": {"name": "J. Vazquez"},
+      "result": {
+        "set_1": {"games": [6,1], "tie": false},
+        "set_2": {"games": [6,0], "tie": false},
+        "winner": 0
+      }
     },
     {  
       "id": 40,
@@ -435,7 +440,12 @@
       "date": "02/07/2023 19:00",
       "group":"GRUPO D", 
       "player_1": {"name": "A. Llambias"}, 
-      "player_2": {"name": "G. Menendez"}
+      "player_2": {"name": "G. Menendez"},
+      "result": {
+        "set_1": {"games": [6,1], "tie": false},
+        "set_2": {"games": [6,0], "tie": false},
+        "winner": 0
+      }
     },
     {  
       "id": 50,
