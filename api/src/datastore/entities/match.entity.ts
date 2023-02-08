@@ -33,10 +33,7 @@ export class Result{
 export class Match {
     @ObjectIdColumn()
     _id: ObjectId;
-
-    @Column()
-    id: string;
-
+    
     @Column()
     category_id: string;
 

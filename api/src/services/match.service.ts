@@ -16,6 +16,7 @@ export class MatchService {
         { _id: new ObjectId(match_id) },
         { $set: { result: result } }
       );
+      match.result = result;
       return match;
     } catch (ex) {
       console.log(`update match error: ${ex}`)

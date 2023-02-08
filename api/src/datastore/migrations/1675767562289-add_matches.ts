@@ -11,8 +11,7 @@ export class addMatches1675767562289 implements MigrationInterface {
         demo_matches['matches'].forEach(function(value: any){
             let match = new Match();            
             match.date = value['date'];
-            match.group = value['group'];
-            match.id = value['id'];
+            match.group = value['group'];           
             match.result = value['result'];
             match.team_local = value['player_1'];
             match.team_visit = value['player_2'];

@@ -12,10 +12,7 @@ export class Group {
     id: string;
 
     @Column()
-    name: string;
-
-    @Column()
-    color: string;
+    name: string;  
 
     @Column()
     teams: Array<Team>;
