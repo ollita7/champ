@@ -37,8 +37,7 @@ const useGetUser = (): any => {
   return null;
 }
 const useLogout = () => {
-  const user = localStorage.removeItem(Config.USER);
-  
+  localStorage.removeItem(Config.USER);
 }
 
 export { useGetProfile, useLogin, useGetUser, useLogout }

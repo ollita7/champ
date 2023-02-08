@@ -56,7 +56,7 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ profile, ...props }): 
 
   const handleLogout = () => {
     useLogout();
-    props.dispatch(clearProfile())
+    props.dispatch(clearProfile());
     handleClose();
   };
 

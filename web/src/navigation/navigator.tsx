@@ -8,7 +8,7 @@ import { NotFound } from '../screens/notfound';
 import { Qualifying } from '../screens/qualifying';
 import { Ranking } from '../screens/ranking';
 import { Terms } from '../screens/terms';
-import { Layout } from './layout';
+import Layout from './layout';
 
 const Navigator = (): React.ReactElement => {
 

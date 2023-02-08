@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import { connect } from "react-redux";
 import { Navigate } from 'react-router-dom';
 import { ROUTES } from './constants';
-import { Layout } from './layout';
+//import { Layout } from './layout';
 import { IStoreDispatchProps } from '../store/storeComponent';
 import { setProfile } from '../store/reducers/profile';
 import { useGetProfile } from '../network/services/user/user.service';
@@ -24,7 +24,7 @@ const ProtectedRoute = ({ profile, ...props }: IProps): React.ReactElement => {
   return (
     <Fragment>
       {isLoading && <span>Loading page</span>}
-      {isSuccess && profile.email && <Layout />}
+      {isSuccess && profile.email && <></>}
       {isError && <Navigate to={ROUTES.LOGIN} />}
     </Fragment>
   );
