@@ -6,6 +6,7 @@ import { GenericModel } from '../models/generic.model';
 import { ResponseCode } from '../sdk/constants';
 import { Response } from '../sdk/response';
 import { UserService } from '../services/user.services';
+import { Group } from '../datastore/entities'
 
 
 @JsonController('/user')

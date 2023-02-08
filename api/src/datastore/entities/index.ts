@@ -1,2 +1,6 @@
 export { User } from './user.entity'
 export { Tenant } from './tenant.entity'
+export { Tournament } from './tournament.entity'
+export { Group } from './group.entity'
+export { Team } from './team.entity'
+export { Match } from './match.entity'

@@ -65,6 +65,102 @@
                     "required": true
                 }
             }
+        },
+        "/v1/tournament/:tournament_id/category/:category_id": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tournament_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    },
+                    {
+                        "name": "category_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    }
+                ],
+                "tags": [
+                    "tournament"
+                ]
+            }
+        },
+        "/v1/tournament/match/:id/result": {
+            "put": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tournament_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    },
+                    {
+                        "name": "category_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    }
+                ],
+                "tags": [
+                    "tournament"
+                ]
+            }
+        },
+        "/v1/match/:id/result": {
+            "put": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    }
+                ],
+                "tags": [
+                    "match"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResultIn"
+                            }
+                        }
+                    },
+                    "description": "ResultIn",
+                    "required": true
+                }
+            }
         }
     },
     "openapi": "3.0.0",
@@ -121,6 +217,44 @@
                     "name",
                     "email",
                     "password"
+                ]
+            },
+            "SetIn": {
+                "properties": {
+                    "games": {
+                        "type": "string"
+                    },
+                    "tie": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "games",
+                    "tie"
+                ]
+            },
+            "ResultIn": {
+                "properties": {
+                    "set_1": {
+                        "type": "string"
+                    },
+                    "set_2": {
+                        "type": "string"
+                    },
+                    "super": {
+                        "type": "string"
+                    },
+                    "winner": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "set_1",
+                    "set_2",
+                    "super",
+                    "winner"
                 ]
             }
         }

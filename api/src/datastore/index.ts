@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { createConnection, Connection, ConnectionOptions } from "typeorm";
-import { User } from './entities';
+import { User, Tournament, Match } from './entities';
 
 require('dotenv').config();
 
@@ -16,7 +16,9 @@ const connection_options: ConnectionOptions = {
     authSource: 'admin',
     useUnifiedTopology: true,
     entities: [
-        User
+        User,
+        Tournament,
+        Match
     ],
 }
 const connection: Promise<void | Connection> = createConnection(connection_options).catch((error: any) => console.log(error));
