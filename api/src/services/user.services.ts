@@ -3,6 +3,7 @@ let jwt = require('jwt-simple');
 import { getRepository } from '../datastore';
 import { environment } from '../../environments/environment';
 import { User } from '../datastore/entities'
+import { LoginIn } from 'models/user.model';
 const crypto = require("crypto")
 
 export class UserService {
@@ -18,11 +19,11 @@ export class UserService {
     }
   }
 
-  async logIn(payload: any) {
+  async logIn(payload: LoginIn) {
     try {
      
       let repo = await getRepository(User)
-      let user = await repo.findOne({ where: { 'email': payload.email } });     
+      let user = await repo.findOne({ where: { 'email': payload.username } });     
       var password = payload.password;
       var hash = crypto.pbkdf2Sync(password, process.env.JWT_SECRET, 1000, 64, 'sha512').toString('hex');
       var token = null;
