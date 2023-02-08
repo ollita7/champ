@@ -17,8 +17,7 @@ export class addTournament1675706281679 implements MigrationInterface {
         tournament.tenant_id = '1';
         let groups = new Array<Group>();
         demo_tournament['tournament']['groups'].forEach(function(value: any){
-            let group = new Group()
-            group.color = value['color'];
+            let group = new Group()            
             group.name = value['name'];
             group.id = group.name.split(' ')[1];
             let teams = new Array<Team>();
