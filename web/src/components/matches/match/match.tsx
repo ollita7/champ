@@ -7,7 +7,8 @@ import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import MilitaryTechRoundedIcon from '@mui/icons-material/MilitaryTechRounded';
 import CheckIcon from '@mui/icons-material/Check';
-import { getMember } from '../../../network/services/match/match.services';
+import { getMember } from '../../../network/services/match.services';
+import { IMatch } from '../../../network/services/tournament.service';
 import EditIcon from '@mui/icons-material/Edit';
 import { getProfile } from '../../../store/selectors';
 import { RootState } from "../../../store/store";
@@ -23,7 +24,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export interface IMatchesProps {
-  match: any;
+  match: IMatch;
   disabled?: boolean;
   profile: IProfileState;
 }
@@ -50,11 +51,11 @@ const Match: React.FC<IMatchesProps> = ({ profile, match, disabled = false, ...p
     }
   }
 
-  const renderMatch = (match, disable = false) => {
-    const member_1 = getMember(match.player_1.name) || {country: 'uy'};
-    const member_2 = getMember(match.player_2.name) || {country: 'uy'};
+  const renderMatch = (match: IMatch, disable = false) => {
+    const member_1 = getMember(match.team_local.name) || {country: 'uy'};
+    const member_2 = getMember(match.team_visit.name) || {country: 'uy'};
 
-    return (<div className={disable ? 'match disabled': 'match'} key={match.id} >
+    return (<div className={disable ? 'match disabled': 'match'} key={match._id} >
         <Item elevation={4} >
           <div className='details'>
             
@@ -73,14 +74,14 @@ const Match: React.FC<IMatchesProps> = ({ profile, match, disabled = false, ...p
             <div className='img'>
               <CircleFlag countryCode={member_1.country.toLowerCase()} height="25"/>
             </div>
-            <Typography><span className={match.result && !match.result.winner ? 'member winner' : 'member'}>{match.player_1.name}</span></Typography>
+            <Typography><span className={match.result && !match.result.winner ? 'member winner' : 'member'}>{match.team_local.name}</span></Typography>
             {renderResult(match.result, 0)}
           </div>
           <div className='player'>
             <div className='img'>
               <CircleFlag countryCode={member_2.country.toLowerCase()} height="25"/>
             </div>
-            <Typography><span className={match.result && match.result.winner ? 'member winner' : 'member'}>{match.player_2.name}</span></Typography>
+            <Typography><span className={match.result && match.result.winner ? 'member winner' : 'member'}>{match.team_visit.name}</span></Typography>
             {renderResult(match.result, 1)}
           </div>
         </Item>

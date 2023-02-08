@@ -1,5 +1,5 @@
 import { BaseClient } from '../appClient';
-import { ILogin } from '../services/user/user.service';
+import { ILogin } from '../services/user.service';
 
 const ENDPOINTS = {
   getProfile: () => `user/profile`,

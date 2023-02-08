@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from 'axios';
 import toast from 'react-hot-toast';
-import { useGetUser } from '../network/services/user/user.service';
+import { useGetUser } from './services/user.service';
 import { API_STATUS_CODE } from './constants';
 
 const injectToken = (config: AxiosRequestConfig): AxiosRequestConfig => {

@@ -1,5 +1,6 @@
-import groups from '../../../db/data.json';
-import matchesData from '../../../db/matches.json';
+import groups from '../../db/data.json';
+import matchesData from '../../db/matches.json';
+import { IGroup, ITeam } from './tournament.service';
 
 export interface IStanding{
   pj: number;
@@ -9,20 +10,19 @@ export interface IStanding{
   member: any;
 }
 
-const getStandings = (groupName: string): Array<IStanding> => {
-  const groupMatches = matchesData.matches.filter(m => m.group == groupName);
-  const group = groups.tournament.groups.find(g => g.name == groupName)
+const getStandings = (group: IGroup): Array<IStanding> => {
   const standings: Array<IStanding> = [];
-  group?.members.forEach(member => {
-    const row: IStanding = {pj: 0, sf: 0, pts: 0, gf: 0, member}
-    const result = groupMatches
-      .filter(gm => (gm.player_1.name === member.name || gm.player_2.name === member.name ) && gm.result)
+  group?.teams.forEach((team: ITeam) => {
+    const row: IStanding = {pj: 0, sf: 0, pts: 0, gf: 0, member: team.name}
+    const result = group.matches
+      .filter(gm => (gm.team_local.name === team.name || gm.team_visit.name === team.name ) && gm.result)
     const statistic = result
       .map(m => {
-        const data = calculateData(m.player_1.name == member.name ? 0 : 1, m.result)
+        const data = calculateData(m.team_local.name == team.name ? 0 : 1, m.result)
         row.sf += data.sf;
         row.gf += data.gf;
         row.pts += data.pts;
+        row.member = team;
       });
     row.pj = result.length;
     standings.push(row);

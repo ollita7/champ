@@ -1,17 +1,5 @@
 export const enum QUERIES_KEYS {
   USER_GET_PROFILE = 'user/get_profile',
-  PROJECT_LIST = 'project/list',
-  PROJECT_GET = 'project/get',
-  PROJECT_CREATE = 'project/create',
-  PROJECT_DELETE = 'project/delete',
-  PAYMENT_CREATE = 'payment/create',
-  APPLICATION_GET = 'application/get',
-  APPLICATION_LIST = 'application/list',
-  APPLICATION_LIST_TYPES = 'application/listAppTypes',
-  PROJECT_LIST_TYPES = 'project/listProjectTypes',
-  COMPONENT_LIST = 'component/list',
-  COMPONENT_LIST_BY_APPLICATION = 'component/listByApplication',
-  COMPONENT_LIST_TYPES = 'component/listComponentTypes',
-  RISK_LIST = 'risk/list',
-  ANALYTICS_LIST = 'analytics/list',
+  GET_TOURNAMENT = 'get_torunament',
+  GET_TOURNAMENT_MEMBERS = 'get_torunament_members'
 }

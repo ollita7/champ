@@ -17,9 +17,10 @@ import Collapse from '@mui/material/Collapse';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'; 
 import { CircleFlag } from 'react-circle-flags'
-import { getStandings } from '../../network/services/match/match.services';
+import { getStandings } from '../../network/services/match.services';
 
 import './styles.scss'
+import { IGroup } from '../../network/services/tournament.service';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   position: 'relative',
@@ -65,12 +66,12 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 }));
 
 export interface IGroupsProps {
-  group: any;
+  group: IGroup;
 }
 
 const Group: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
   const [expanded, setExpanded] = React.useState(false);
-  const standing = getStandings(group.name);
+  const standing = getStandings(group);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -103,7 +104,7 @@ const Group: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
                     >
                       <StyledTableCell component="th" scope="row" >
                         <div className='country'>
-                          <CircleFlag countryCode={s.member.country.toLowerCase()} height="25"/>
+                          <CircleFlag countryCode={s.member.country?.toLowerCase()} height="25"/>
                           <span className='member'>{s.member.name} </span>
                         </div>
                       </StyledTableCell>

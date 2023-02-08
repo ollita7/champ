@@ -3,11 +3,11 @@ import './styles.scss'
 import Typography from '@mui/material/Typography';
 import { CircleFlag } from 'react-circle-flags'
 import Paper from '@mui/material/Paper';
-import data from '../../db/matches.json';
+//import data from '../../db/matches.json';
 import { styled } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CheckIcon from '@mui/icons-material/Check';
-import { getMember } from '../../network/services/match/match.services';
+import { getMember } from '../../network/services/match.services';
 import { Match } from './match';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,7 +25,7 @@ export interface IMatchesProps {
 const Matches: React.FC<IMatchesProps> = ({ group, ...props }): ReactElement => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
-  const groupMatches = data.matches
+  const groupMatches = group.matches
                           .filter(match => match.group == group.name );
   const defined_matches = groupMatches.filter(match => match.date != 'TBD')
                                       .sort((a,b) => {

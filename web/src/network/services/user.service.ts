@@ -1,7 +1,7 @@
 import { useQuery, useMutation } from 'react-query';
-import { UserRepository } from "../../repositories/user";
-import { Config } from '../../../utils/config';
-import {  QUERIES_KEYS } from '../../queryKeys';
+import { UserRepository } from "../repositories/user";
+import { Config } from '../../utils/config';
+import {  QUERIES_KEYS } from '../queryKeys';
 
 export interface ILogin {
   username?: string;

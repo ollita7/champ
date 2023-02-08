@@ -1,22 +1,33 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
+import { connect } from "react-redux";
 import './styles.scss'
-import ResponsiveMenu from '../../components/menu/menu'
+import ResponsiveMenu from '../../components/menu/menu';
+import { IStoreDispatchProps } from '../../store/storeComponent';
+import { getApplication } from '../../store/selectors';
+import { RootState } from "../../store/store";
+import { IApplicationState } from '../../store/reducers/application';
 import Group from './group';
-
-import data from '../../db/data.json';
+import { userGetTournament } from '../../network/services/tournament.service';
 
 export interface IGroupsProps {
-
+  application: IApplicationState;
 }
 
-const Groups: React.FC<IGroupsProps> = ({ ...props }): ReactElement => {
+const Groups: React.FC<IGroupsProps> = ({application, ...props }): ReactElement => {
+  const { data: tournament, isLoading, isSuccess } = userGetTournament(application.tournament, application.category);
+
   return (
     <div className='groups'>
-      {data.tournament.groups.map(group => 
+      {isLoading && <div>Cargando...</div>}
+      {isSuccess && tournament.groups.map(group => 
         <Group group={group} key={group.name}></Group>
       )}
     </div>
   )
 }
 
-export default Groups;
+const mapStateToProps = (state: RootState) => ({
+  application: getApplication(state),
+});
+
+export default connect(mapStateToProps)(Groups);

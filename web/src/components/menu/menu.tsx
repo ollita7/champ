@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 import Logo from '../../assets/logo_white.svg';
 import Atpe from '../../assets/atpe.svg';
 import { ROUTES } from '../../navigation/constants';
-import { useLogout } from '../../network/services/user/user.service';
+import { useLogout } from '../../network/services/user.service';
 import { IStoreDispatchProps } from '../../store/storeComponent';
 import { clearProfile  } from '../../store/reducers/profile';
 import { getProfile } from '../../store/selectors';

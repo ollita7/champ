@@ -9,7 +9,7 @@ import DensityLargeSharpIcon from '@mui/icons-material/DensityLargeSharp';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import DensitySmallSharpIcon from '@mui/icons-material/DensitySmallSharp';
 import { Typography } from '@mui/material';
-import { getQualifyings } from '../../network/services/match/match.services';
+import { getQualifyings } from '../../network/services/match.services';
 import ResponsiveMenu from '../../components/menu/menu';
 import './styles.scss'
 import { Match } from '../../components/matches/match';

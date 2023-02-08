@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { useGetUser } from '../../network/services/user/user.service';
+import { useGetUser } from '../../network/services/user.service';
 
 export interface IProfileState {
   country: string | null;

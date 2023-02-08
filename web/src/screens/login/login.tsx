@@ -12,7 +12,7 @@ import { IStoreDispatchProps } from '../../store/storeComponent';
 import { setProfile } from '../../store/reducers/profile';
 import { ROUTES } from '../../navigation/constants';
 import { Config } from '../../utils';
-import { useLogin } from '../../network/services/user/user.service';
+import { useLogin } from '../../network/services/user.service';
 
 export interface ILoginProps extends IStoreDispatchProps {
 

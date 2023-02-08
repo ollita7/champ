@@ -5,7 +5,7 @@ import { ROUTES } from './constants';
 //import { Layout } from './layout';
 import { IStoreDispatchProps } from '../store/storeComponent';
 import { setProfile } from '../store/reducers/profile';
-import { useGetProfile } from '../network/services/user/user.service';
+import { useGetProfile } from '../network/services/user.service';
 import { getProfile } from '../store/selectors';
 import { RootState } from "../store/store";
 import { IProfileState } from '../store/reducers/profile';
