@@ -1,0 +1,59 @@
+.groups {
+  margin: 20px;
+  .breadcrumbs{
+    padding-bottom: 40px;
+  }
+  .group {
+    padding-bottom: 40px;
+    > div {
+      background: #18273a;
+    }
+    .table{
+      .table-row{
+        &:nth-child(1) th:nth-child(1)::before, &:nth-child(2) th:nth-child(1)::before {
+          content:'';
+          width: 3px;
+          background:#FFD700;
+          position: absolute;
+          left: 0;
+          top: 10%;
+          height: 80%;
+          border-radius: 25px;
+        }
+        &:nth-child(3) th:nth-child(1)::before, &:nth-child(4) th:nth-child(1)::before {
+          content:'';
+          width: 3px;
+          background:#B5B7BB;
+          position: absolute;
+          left: 0;
+          top: 10%;
+          height: 80%;
+          border-radius: 25px;
+        }
+        .country{
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+          .member{
+            padding-left:10px;
+          }
+        }
+      }
+    }
+    .name{
+      padding-left: 16px;
+      margin-bottom: -25px;
+    }
+    .expand-more{
+      .more-icon{
+        color: #00aeef
+      }
+      span{
+        color: #00aeef;
+        transform:rotate(0deg);
+        font-size: 14px;
+        transition: none;
+      }
+    }
+  }
+}

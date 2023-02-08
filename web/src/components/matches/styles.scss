@@ -1,0 +1,22 @@
+.matches {
+  background: #2689ca;
+  padding: 16px 0 0 0;
+  .expand{
+    transition: all 2s;
+  }
+  .more-less{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 16px;
+    color: white;
+    .icon{
+      transform: rotate(0deg);
+      &.expanded{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+

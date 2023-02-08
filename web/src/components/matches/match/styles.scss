@@ -1,0 +1,56 @@
+.match{
+  > div{
+    border-top: 3px solid #0091d2;
+  }
+  &.disabled > div{
+    border-top: none;
+    background: #d7d6d6;
+  }
+  padding: 0 16px 16px 16px;
+  .details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    align-items: center;
+    .date{
+      font-weight: 300;
+    }
+    .title{
+      color: grey;
+    }
+  }
+  .player{
+    padding-top: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .member{
+      padding-left: 20px;
+      &.winner{
+        font-weight: 700;
+      }
+    }
+    .result{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex: 1;
+      align-items: center;
+      .check{
+        color: #0091d2;
+      }
+      .set{
+        width: 15px;
+        padding-right: 15px;
+        &.winner{
+          color: #0091d3;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

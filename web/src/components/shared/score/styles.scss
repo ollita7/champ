@@ -1,0 +1,70 @@
+@import "../../../../static/colors.scss";
+@import "../../../../static/mixin.scss";
+@import "../../../../static/variables.scss";
+
+.scoreContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  flex: 20 auto;
+
+  .label-text {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .text,
+    .score {
+      padding: 10px;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include textBasis($text);
+      color: white;
+      min-width: 44px;
+    }
+
+    .score {
+      margin-left: 2px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &.ms {
+      .score {
+        background-color: rgba($orange, $alpha: 0.2);
+        color: $orange;
+      }
+      .text {
+        background-color: $orange;
+      }
+    }
+
+    &.ss {
+      .score {
+        background-color: rgba($sky-blue, $alpha: 0.2);
+        color: $sky-blue;
+      }
+      .text {
+        background-color: $sky-blue;
+      }
+    }
+
+    &.r {
+      .score {
+        background-color: rgba($red, $alpha: 0.2);
+        color: $red;
+      }
+      .text {
+        background-color: $red;
+      }
+    }
+  }
+}

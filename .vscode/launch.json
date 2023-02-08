@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "name": "Kiwi Server debug",
+            "program": "${workspaceRoot}/api/dist/default/src/server.js",
+            "request": "launch",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "preLaunchTask": "compile",
+            "runtimeExecutable": null,
+            "sourceMaps": true,
+            "stopOnEntry": false,
+            "type": "node",
+            "envFile": "${workspaceRoot}/api/.env"
+        }
+    ]
+  }

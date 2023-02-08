@@ -1,0 +1,8 @@
+{
+  "result": {
+    "set_1": {"games": [7,6], "tie": true, "tie_result": [8, 6]},
+    "set_2": {"games": [6,7], "tie": true, "tie_result": [6, 8]},
+    "super": [6, 10],
+    "winner": 1
+  }
+}
