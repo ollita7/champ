@@ -97,8 +97,8 @@
                 ]
             }
         },
-        "/v1/tournament/match/:id/result": {
-            "put": {
+        "/v1/tournament/:tournament_id/category/:category_id/members": {
+            "get": {
                 "consumes": [
                     "application/json"
                 ],
@@ -158,6 +158,31 @@
                         }
                     },
                     "description": "ResultIn",
+                    "required": true
+                }
+            }
+        },
+        "/v1/match": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "tags": [
+                    "match"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MatchIn"
+                            }
+                        }
+                    },
+                    "description": "MatchIn",
                     "required": true
                 }
             }
@@ -255,6 +280,60 @@
                     "set_2",
                     "super",
                     "winner"
+                ]
+            },
+            "TeamIn": {
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "country": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "_id",
+                    "name",
+                    "country"
+                ]
+            },
+            "MatchIn": {
+                "properties": {
+                    "category_id": {
+                        "type": "string"
+                    },
+                    "tournament_id": {
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    },
+                    "group": {
+                        "type": "string"
+                    },
+                    "team_local": {
+                        "type": "string"
+                    },
+                    "team_visit": {
+                        "type": "string"
+                    },
+                    "result": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "category_id",
+                    "tournament_id",
+                    "date",
+                    "group",
+                    "team_local",
+                    "team_visit",
+                    "result"
                 ]
             }
         }
