@@ -1,4 +1,4 @@
-import { JsonController, Get, Post, Authorize, Body, Param} from 'kiwi-server';
+import { JsonController, Get, Put, Post, Authorize, Body, Param} from 'kiwi-server';
 import { GenericModel } from '../models/generic.model';
 import { ResponseCode } from '../sdk/constants';
 import { Response } from '../sdk/response';
@@ -18,4 +18,10 @@ export class TournamentController {
     return new Response(ResponseCode.OK,'',result);
   }
   
+  @Put('/match/:id/result')
+  public async updateMatchResult(@Param('tournament_id') tournament_id: string, @Param('category_id') category_id: string){    
+    let result = await this.tournamentService.getTournamentCategory(tournament_id, category_id); 
+    return new Response(ResponseCode.OK,'',result);
+  }
+
 }
