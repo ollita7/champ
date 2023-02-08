@@ -4,7 +4,8 @@ import { getRepository } from '../datastore';
 import { environment } from '../../environments/environment';
 import { Match } from '../datastore/entities'
 import { ObjectId } from 'mongodb';
-import { ResultIn } from '../models/match.model';
+import { ResultIn, MatchIn } from '../models/match.model';
+
 const crypto = require("crypto")
 
 export class MatchService {
@@ -22,6 +23,12 @@ export class MatchService {
       console.log(`update match error: ${ex}`)
       return null;
     }
+  }
+
+  async addMatch(match: MatchIn) {
+    let matchRepo = await getRepository(Match);
+    const result = await matchRepo.insert(match);
+    return result;
   }
 
 }
