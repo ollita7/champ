@@ -2,11 +2,10 @@ import React, { Fragment, useEffect } from 'react';
 import { connect } from "react-redux";
 import { Navigate } from 'react-router-dom';
 import { ROUTES } from './constants';
-import { Layout } from './layout';
+//import { Layout } from './layout';
 import { IStoreDispatchProps } from '../store/storeComponent';
 import { setProfile } from '../store/reducers/profile';
 import { useGetProfile } from '../network/services/user/user.service';
-import { setCurrentAccount } from '../network/services/account/account.service';
 import { getProfile } from '../store/selectors';
 import { RootState } from "../store/store";
 import { IProfileState } from '../store/reducers/profile';
@@ -20,17 +19,12 @@ const ProtectedRoute = ({ profile, ...props }: IProps): React.ReactElement => {
   
   useEffect(() => {
     props.dispatch(setProfile(data));
-    if (data) {
-      const userAccounts: Array<any> = data.accounts;
-      if (userAccounts.length > 0)
-        setCurrentAccount(userAccounts[0]);
-    }
   }, [isSuccess]);
 
   return (
     <Fragment>
       {isLoading && <span>Loading page</span>}
-      {isSuccess && profile.email && <Layout />}
+      {isSuccess && profile.email && <></>}
       {isError && <Navigate to={ROUTES.LOGIN} />}
     </Fragment>
   );

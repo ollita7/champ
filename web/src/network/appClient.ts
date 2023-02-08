@@ -35,25 +35,30 @@ class ApiClient {
     return this.ApiInstance.delete<T, R>(url, config);
   }
 
+  getMessage = (message, error) => {
+    return message ? message : error;
+  }
+
   handleError = async (error: AxiosError) => {
     const { response } = error;
     const status = response?.status ?? '';
+    const message = response?.data.meta.message;
 
     switch (status) {
       case STATUS_CODES.INTERNAL_SERVER_ERROR: {
-        toast.error('Internal Error');
+        toast.error(this.getMessage(message,'Internal Error'));
         break;
       }
       case STATUS_CODES.FORBIDDEN: {
-        toast.error('Forbidden');
+        toast.error(this.getMessage(message,'Forbidden'));
         break;
       }
       case STATUS_CODES.UNAUTHORIZED: {
-        toast.error('You have no access');
+        toast.error(this.getMessage(message,'You don`t have access'));
         break;
       }
       case STATUS_CODES.NOT_FOUND: {
-        toast.error('Method not found');
+        toast.error(this.getMessage(message,'Method not found'));
         break;
       }
       case STATUS_CODES.BAD_REQUEST: {

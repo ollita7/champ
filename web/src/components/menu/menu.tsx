@@ -1,5 +1,8 @@
 import React, { ReactElement } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { connect } from "react-redux";
+
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,6 +16,12 @@ import Button from '@mui/material/Button';
 import Logo from '../../assets/logo_white.svg';
 import Atpe from '../../assets/atpe.svg';
 import { ROUTES } from '../../navigation/constants';
+import { useLogout } from '../../network/services/user/user.service';
+import { IStoreDispatchProps } from '../../store/storeComponent';
+import { clearProfile  } from '../../store/reducers/profile';
+import { getProfile } from '../../store/selectors';
+import { RootState } from "../../store/store";
+import { IProfileState } from '../../store/reducers/profile';
 
 import './styles.scss';
 
@@ -20,13 +29,17 @@ const pages = [
   {title: 'Grupos', link: ROUTES.HOME}, 
   {title: 'Cruces', link: ROUTES.QUALIFYINGS},
   {title: 'Ranking', link: ROUTES.RANKING},
-  {title: 'Reglamento', link: ROUTES.TERMS}
+  {title: 'Reglamento', link: ROUTES.TERMS},
+  {title: 'Acceder', link: ROUTES.LOGIN},
 ];
 
-export interface IResponsiveMenuProps {
+export interface IResponsiveMenuProps  extends IStoreDispatchProps {
+  profile: IProfileState;
 }
 
-const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElement => {
+const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ profile, ...props }): ReactElement => {
+  
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const navigate = useNavigate();
 
@@ -39,6 +52,20 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
     if (page && page == '/terms')
       window.open('http://ocean-tour.netlify.app/reglamento.pdf');
     else if (page) navigate(page);
+  };
+
+  const handleLogout = () => {
+    useLogout();
+    props.dispatch(clearProfile());
+    handleClose();
+  };
+
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -57,9 +84,7 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
               >
                 <MenuIcon />
               </IconButton>
-              <div className='atpe'>
-                <img src={Atpe} alt="logo" />
-              </div>
+              
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -96,6 +121,42 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
                 </Button>
               ))}
             </Box>
+            <div className='atpe'>
+              <img src={Atpe} alt="logo" />
+            </div>
+            {/*<Button color="inherit" onClick={() => navigate(ROUTES.LOGIN)}>Login</Button>*/}
+            {profile?._id && 
+              <div>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleMenu}
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  <MenuItem>{profile.name}</MenuItem>
+                  <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                </Menu>
+              </div>
+            }
           </Toolbar>
         </Container>
       </AppBar>
@@ -107,4 +168,9 @@ const ResponsiveMenu: React.FC<IResponsiveMenuProps> = ({ ...props }): ReactElem
     
   );
 }
-export default ResponsiveMenu;
+
+const mapStateToProps = (state: RootState) => ({
+  profile: getProfile(state),
+});
+
+export default connect(mapStateToProps)(ResponsiveMenu);

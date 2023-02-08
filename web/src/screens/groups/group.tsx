@@ -1,5 +1,6 @@
 import React, { ReactElement, useState } from 'react';
-import './styles.scss'
+import { connect } from "react-redux";
+
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -17,7 +18,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'; 
 import { CircleFlag } from 'react-circle-flags'
 import { getStandings } from '../../network/services/match/match.services';
-import { mdiWhiteBalanceAuto } from '@mdi/js';
+
+import './styles.scss'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   position: 'relative',
@@ -66,7 +68,7 @@ export interface IGroupsProps {
   group: any;
 }
 
-const Group: React.FC<IGroupsProps> = ({group, ...props }): ReactElement => {
+const Group: React.FC<IGroupsProps> = ({ group, ...props }): ReactElement => {
   const [expanded, setExpanded] = React.useState(false);
   const standing = getStandings(group.name);
 

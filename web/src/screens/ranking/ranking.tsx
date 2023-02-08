@@ -12,22 +12,8 @@ export interface IRankingProps {
 }
 
 const Ranking: React.FC<IRankingProps> = ({ ...props }): ReactElement => {
-  const navigate = useNavigate();
-  const [error, setError] = useState(false);
-
-  const handleSuccess = (res) => {
-    const id_token = res.getAuthResponse().id_token;
-    localStorage.setItem(Config.TOKEN_NAME, id_token);
-    navigate(ROUTES.MATCHES);
-  }
-
-  const handleError = (res) => {
-    setError(true);
-  }
-
   return (
     <div className='ranking'>
-       <ResponsiveMenu/>
        <h3><Typography>Proximamente</Typography></h3>
     </div>
   )

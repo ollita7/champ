@@ -28,8 +28,11 @@ export class UserService {
       var hash = crypto.pbkdf2Sync(password, process.env.JWT_SECRET, 1000, 64, 'sha512').toString('hex');
       var token = null;
       if(hash == user.password) {
-        var token = jwt.encode(payload, process.env.JWT_SECRET);
-      } 
+        token = jwt.encode(payload, process.env.JWT_SECRET);
+      }
+      else {
+        return null;
+      }
       user.token = token
       delete user.password;
       return user

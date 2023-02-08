@@ -1,17 +1,25 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { useGetUser } from '../../network/services/user/user.service';
 
 export interface IProfileState {
+  country: string | null;
   email: string | null;
-  picture: string | null;
-  name: string;
-  accounts: Array<any>;
+  name: string | null;
+  role: string | null;
+  status: string | null;
+  token: string | null;
+  _id: string | null;
 }
 
+const user = useGetUser();
 const initialState: IProfileState = {
-  email: null,
-  picture: null,
-  name: '',
-  accounts: []
+  country: user?.country,
+  email: user?.email,
+  name: user?.name,
+  role: user?.role,
+  status: user?.status,
+  token: user?.token,
+  _id: user?._id,
 }
 
 const profileSlice = createSlice({
@@ -22,7 +30,7 @@ const profileSlice = createSlice({
       const newState = {...state, ...action.payload };
       return newState;
     },
-    clearProfile: state => initialState,
+    clearProfile: state => useGetUser(),
   },
 });
 

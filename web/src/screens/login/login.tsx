@@ -1,60 +1,92 @@
 import React, { ReactElement, useState } from 'react';
+import { connect } from "react-redux";
 import { useNavigate, Link } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
+import { Form, Formik, Field } from "formik";
+import * as Yup from "yup";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
+
 import './styles.scss'
+import { IStoreDispatchProps } from '../../store/storeComponent';
+import { setProfile } from '../../store/reducers/profile';
 import { ROUTES } from '../../navigation/constants';
 import { Config } from '../../utils';
-import GoogleIcon from '@mui/icons-material/Google';
+import { useLogin } from '../../network/services/user/user.service';
 
-export interface ILoginProps {
+export interface ILoginProps extends IStoreDispatchProps {
 
 }
 
 const Login: React.FC<ILoginProps> = ({ ...props }): ReactElement => {
   const navigate = useNavigate();
-  const [error, setError] = useState(false);
+  const mutation = useLogin();
 
-  const handleSuccess = (res) => {
-    const id_token = res.getAuthResponse().id_token;
-    localStorage.setItem(Config.TOKEN_NAME, id_token);
-    navigate(ROUTES.HOME);
-  }
+  const initialValues = {
+    username: '',
+    password: ''
+  };
 
-  const handleError = (res) => {
-    setError(true);
+  const loginSchema = Yup.object().shape({
+    username: Yup.string().required(`Usuario es obligatorio`),
+    password: Yup.string().required(`Password es obligatorio`),
+  });
+
+  const handleContinue = (values) => {
+    mutation.mutate(values, {
+      onSuccess: async (response) => {
+        localStorage.setItem(Config.USER, JSON.stringify(response));
+        props.dispatch(setProfile(response));
+        navigate(ROUTES.HOME);
+      },
+    });
   }
 
   return (
     <div className='login'>
-      <div className='content'>
-        <div className="left">
-          <h1>Tectonic</h1>
-          <h2>Let's guide you on the process of development software</h2>
-        </div>
-        <div className="login-form">
-          <h1>Get started for free</h1>
-          <span className='no-credit'>No credit card required</span>
-          <div className='google-btn'>
-            <GoogleLogin
-              className='google-login'
-              clientId={Config.GOOGLE_CLIENT_ID}
-              //buttonText="Login with Google"
-              onSuccess={handleSuccess}
-              onFailure={handleError}
-              cookiePolicy={'single_host_origin'}
-              theme="dark"
-              icon={false}
-            ><GoogleIcon style={{ fill: 'white' }}/><span>Login with Google</span></GoogleLogin>
-          </div>
-          {error &&
-              <span className='error'>Some error ocurred trying to authenticate</span>}
-          <span>By logging in or signing up, you agree to abide by our policies, including our  <Link to="">Terms of Service</Link> and <Link to="">Privacy Policy</Link></span>
-        </div>
-      </div>
-      
-      <div className='footer'>JOIN DEVELOPERS WHO BUILD APPS USING TECTONIC</div>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={loginSchema}
+        onSubmit={(values) => {
+          handleContinue(values);
+        }}
+      >
+         {({ 
+          handleBlur,
+          handleChange,
+          errors, 
+          touched, 
+          dirty }) => (
+          <Form>
+            <div className='username'>
+              <TextField 
+                id="username" 
+                fullWidth 
+                label="Usuario" 
+                onBlur={handleBlur}
+                onChange={handleChange}
+                variant="standard"
+                helperText={touched.username ? errors.username : ""}
+                error={touched.username && Boolean(errors.username)}/>
+            </div>
+            <div className='password'>
+              <TextField 
+                id="password"
+                fullWidth label="Password" 
+                variant="standard" 
+                onBlur={handleBlur}
+                onChange={handleChange}
+                type="password"
+                helperText={touched.password ? errors.password : ""}
+                error={touched.password && Boolean(errors.password)}/>
+            </div>
+            <div className='button'>
+              <Button variant="contained" type="submit">Acceder</Button>
+            </div>
+         </Form>
+         )}
+      </Formik>
     </div>
   )
 }
-
-export default Login;
+export default connect()(Login);
