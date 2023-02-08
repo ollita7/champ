@@ -1,6 +1,7 @@
 import { MigrationInterface, QueryRunner } from "typeorm"
 import { Tournament, Group, Match, Team } from "../entities";
 import { MongoQueryRunner } from "typeorm/driver/mongodb/MongoQueryRunner";
+import { ObjectId } from "mongodb";
 
 
 export class addTournament1675706281679 implements MigrationInterface {
@@ -8,6 +9,7 @@ export class addTournament1675706281679 implements MigrationInterface {
     public async up(queryRunner: MongoQueryRunner): Promise<void> {
         let tournament = new Tournament()
         const demo_tournament = JSON.parse(this.demo_tournament);
+        tournament._id = new ObjectId("63e22e9be767643a2f1869cd");
         tournament.date = new Date(2023,2);
         tournament.name = 'Copa Jorge Mesones';
         tournament.category = 'MASCULINO A';

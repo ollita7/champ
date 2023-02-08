@@ -9,6 +9,7 @@ import { UserController } from "./controllers/user.controller";
 import { UserService } from "./services/user.services";
 import { HeadersMiddleware } from "./middlewares/headers";
 import { LogService, LEVELS, ILog } from "./services/log.services";
+import { TournamentController } from "./controllers/tournament.controller";
 
 require("dotenv").config();
 
@@ -36,7 +37,8 @@ async function validateAuthentication(
 
 const options: IKiwiOptions = {
   controllers: [
-    UserController
+    UserController,
+    TournamentController
   ],
   authorization: validateAuthentication,
   middlewares: [HeadersMiddleware],

@@ -65,6 +65,37 @@
                     "required": true
                 }
             }
+        },
+        "/v1/tournament/:tournament_id/category/:category_id": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tournament_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    },
+                    {
+                        "name": "category_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "String"
+                        }
+                    }
+                ],
+                "tags": [
+                    "tournament"
+                ]
+            }
         }
     },
     "openapi": "3.0.0",
