@@ -6,7 +6,7 @@ import { TournamentService } from '../services/tournament.service';
 import { Group } from '../datastore/entities'
 
 
-
+@Authorize()
 @JsonController('/tournament')
 export class TournamentController {
   

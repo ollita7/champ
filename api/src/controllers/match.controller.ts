@@ -7,6 +7,7 @@ import { Group } from '../datastore/entities'
 import { ResultIn } from '../models/match.model';
 import { MatchIn } from '../models/match.model'
 
+@Authorize()
 @JsonController('/match')
 export class MatchController {
   
