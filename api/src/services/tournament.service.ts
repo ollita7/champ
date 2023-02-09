@@ -16,13 +16,22 @@ export class TournamentService {
       let matchRepo = await getRepository(Match);
       let tournament = await repoTournament.findOne({ where: { '_id': new ObjectId(tournament_id), 'category_id': category_id } });
       let matches = await matchRepo.find({ where: { 'tournament_id': new ObjectId(tournament_id), 'category_id': category_id } });
-      tournament['groups'].map((x: any)=> x['matches'] = matches.filter((match: any) => match['group'] == x['name']));
+      tournament['groups'].map((x: any)=> x['matches'] = matches.filter((match: any) => match['group'] == x['name'] && match['stage'] == 'group'));
       return tournament
     } catch (ex) {
       console.log(`get tournament error: ${ex}`)
       return null;
     }
   }
+
+  async getMatchesByStage(tournament_id: string, category_id: string, stage: string) { //put stange in constants
+
+  }
+
+  async getMatchesByDate(tournament_id: string, category_id: string) {
+    //grouped by date
+  }
+
 
   async getTournamentMembersByCategory(tournament_id: string, category_id: string) {
     try {

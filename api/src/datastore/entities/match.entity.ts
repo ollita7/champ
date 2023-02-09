@@ -55,4 +55,7 @@ export class Match {
     @Column()
     result: Result; 
 
+    @Column()
+    stage: string; 
+
 }

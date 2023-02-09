@@ -323,6 +323,9 @@
                     },
                     "result": {
                         "type": "string"
+                    },
+                    "stage": {
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -333,7 +336,8 @@
                     "group",
                     "team_local",
                     "team_visit",
-                    "result"
+                    "result",
+                    "stage"
                 ]
             }
         }

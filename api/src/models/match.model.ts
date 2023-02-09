@@ -20,13 +20,13 @@ export class TeamIn {
   @IsString() country: string;
 }
 
-export class MatchIn{
-  @IsString() category_id: SetIn;
-  @IsString() tournament_id: SetIn;
+export class MatchIn{  
+  @IsString() category_id: string;
+  @IsString() tournament_id: string;
   @IsString() date: Date;
   @IsString() group: string;
   @IsString() team_local: TeamIn;
   @IsString() team_visit: TeamIn;
   @IsString() result: ResultIn;
-
+  @IsString() stage: ResultIn; 
 }
