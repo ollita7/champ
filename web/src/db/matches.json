@@ -467,7 +467,12 @@
       "date": "02/09/2023 9:00",
       "group":"GRUPO D", 
       "player_1": {"name": "J. Vazquez"}, 
-      "player_2": {"name": "G. Menendez"}
+      "player_2": {"name": "G. Menendez"},
+      "result": {
+        "set_1": {"games": [1,6], "tie": false},
+        "set_2": {"games": [2,6], "tie": false},
+        "winner": 1
+      }
     },
     {  
       "id": 51,

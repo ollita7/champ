@@ -16,7 +16,7 @@ export class addMatches1675767562289 implements MigrationInterface {
             match.team_local = value['player_1'];
             match.team_visit = value['player_2'];
             match.category_id = 'MA';
-            match.stage = value['stage'];
+            match.stage = value['stage'] ? value['stage']: 'group';
             match.tournament_id = new ObjectId("63e22e9be767643a2f1869cd");
             matches.push(match);
         }); 
@@ -35,14 +35,25 @@ export class addMatches1675767562289 implements MigrationInterface {
             "date": "02/08/2023 19:00", 
             "group":"GRUPO A", 
             "player_1": {"name": "S. Ferro"}, 
-            "player_2": {"name": "D. Ponte"}
+            "player_2": {"name": "D. Ponte"},
+            "result": {
+              "set_1": {"games": [6,7], "tie": true, "tie_result":[3, 7]},
+              "set_2": {"games": [3,6], "tie": false},
+              "winner": 1
+            }
           },
           {
             "id": 2,
             "date": "02/07/2023 17:00", 
             "group":"GRUPO A", 
             "player_1": {"name": "S. Ferro"},
-            "player_2": {"name": "I. Moro"}
+            "player_2": {"name": "I. Moro"},
+            "result": {
+              "set_1": {"games": [4,6], "tie": false},
+              "set_2": {"games": [6,0], "tie": false},
+              "super": [1, 8],
+              "winner": 1
+            }
           },
           
           {
@@ -77,7 +88,12 @@ export class addMatches1675767562289 implements MigrationInterface {
             "date": "02/06/2023 17:00",
             "group":"GRUPO A", 
             "player_1": {"name": "D. Ponte"}, 
-            "player_2": {"name": "F. Ferrero"}
+            "player_2": {"name": "F. Ferrero"},
+            "result": {
+              "set_1": {"games": [6,0], "tie": false},
+              "set_2": {"games": [6,0], "tie": false},
+              "winner": 0
+            }
           },
           {
             "id": 9,
@@ -101,7 +117,7 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           {
             "id": 12,
-            "date": "02/10/2023 10:00",
+            "date": "02/10/2023 11:00",
             "group":"GRUPO A", 
             "player_1": {"name": "I. Moro"}, 
             "player_2": {"name": "C. Obregon"}
@@ -160,7 +176,7 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           { 
             "id": 20,
-            "date": "02/10/2023 15:00",
+            "date": "02/10/2023 19:15",
             "group":"GRUPO B", 
             "player_1": {"name": "G. Gorg"}, 
             "player_2": {"name": "M. Marella"}
@@ -186,7 +202,7 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           { 
             "id": 23,
-            "date": "02/09/2023",
+            "date": "02/09/2023 19:15",
             "group":"GRUPO B", 
             "player_1": {"name": "M. Marella"}, 
             "player_2": {"name": "A. Chifflet"}
@@ -208,7 +224,12 @@ export class addMatches1675767562289 implements MigrationInterface {
             "date": "02/07/2023 19:15",
             "group":"GRUPO B", 
             "player_1": {"name": "A. Chifflet"}, 
-            "player_2": {"name": "G. Fernandez"}
+            "player_2": {"name": "G. Fernandez"},
+            "result": {
+              "set_1": {"games": [6,0], "tie": false},
+              "set_2": {"games": [6,2], "tie": false},
+              "winner": 0
+            }
           },
           {   
             "id": 26,
@@ -251,7 +272,12 @@ export class addMatches1675767562289 implements MigrationInterface {
             "date": "02/08/2023 17:00",
             "group":"GRUPO C", 
             "player_1": {"name": "J. Ramos"}, 
-            "player_2": {"name": "R. Ferreri"}
+            "player_2": {"name": "R. Ferreri"},
+            "result": {
+              "set_1": {"games": [6,0], "tie": false},
+              "set_2": {"games": [6,1], "tie": false},
+              "winner": 0
+            }
           },
           { 
             "id": 30,
@@ -267,10 +293,15 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           { 
             "id": 31,
-            "date": "TBD",
+            "date": "02/07/2023 14:00",
             "group":"GRUPO C", 
             "player_1": {"name": "J. Van Kerckhoven"}, 
-            "player_2": {"name": "I. Veiga"}
+            "player_2": {"name": "I. Veiga"},
+            "result": {
+              "set_1": {"games": [6,1], "tie": false},
+              "set_2": {"games": [6,2], "tie": false},
+              "winner": 0
+            }
           },
           { 
             "id": 32,
@@ -281,10 +312,16 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           { 
             "id": 33,
-            "date": "TBD",
+            "date": "02/07/2023 17:00",
             "group":"GRUPO C", 
             "player_1": {"name": "M. Coore"}, 
-            "player_2": {"name": "I. Veiga"}
+            "player_2": {"name": "I. Veiga"},
+            "result": {
+              "set_1": {"games": [4,6], "tie": false},
+              "set_2": {"games": [6,4], "tie": false},
+              "super": [1, 10],
+              "winner": 1
+            }
           },
           { 
             "id": 34,
@@ -333,17 +370,27 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           {  
             "id": 39,
-            "date": "02/07/2023",
+            "date": "02/07/2023 17:30",
             "group":"GRUPO D", 
             "player_1": {"name": "L. Viola"}, 
-            "player_2": {"name": "J. Vazquez"}
+            "player_2": {"name": "J. Vazquez"},
+            "result": {
+              "set_1": {"games": [6,1], "tie": false},
+              "set_2": {"games": [6,0], "tie": false},
+              "winner": 0
+            }
           },
           {  
             "id": 40,
             "date": "02/08/2023",
             "group":"GRUPO D", 
             "player_1": {"name": "L. Viola"}, 
-            "player_2": {"name": "G. Menendez"}
+            "player_2": {"name": "G. Menendez"},
+            "result": {
+              "set_1": {"games": [6,1], "tie": false},
+              "set_2": {"games": [6,0], "tie": false},
+              "winner": 0
+            }
           },
           {  
             "id": 41,
@@ -360,17 +407,22 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           {  
             "id": 42,
-            "date": "02/11/2023 19:30",
+            "date": "02/12/2023 17:00",
             "group":"GRUPO D", 
             "player_1": {"name": "M. Buzik"}, 
             "player_2": {"name": "A. Llambias"}
           },
           {  
             "id": 43,
-            "date": "TBD",
+            "date": "02/07/2023 10:00",
             "group":"GRUPO D", 
             "player_1": {"name": "M. Buzik"}, 
-            "player_2": {"name": "J. Vazquez"}
+            "player_2": {"name": "J. Vazquez"},
+            "result": {
+              "set_1": {"games": [6,0], "tie": false},
+              "set_2": {"games": [6,0], "tie": false},
+              "winner": 0
+            }
           },
           {    
             "id": 44,
@@ -414,7 +466,12 @@ export class addMatches1675767562289 implements MigrationInterface {
             "date": "02/06/2023 17:15",
             "group":"GRUPO D", 
             "player_1": {"name": "J. Echavarria"}, 
-            "player_2": {"name": "G. Menendez"}
+            "player_2": {"name": "G. Menendez"},
+            "result": {
+              "set_1": {"games": [6,2], "tie": false},
+              "set_2": {"games": [6,3], "tie": false},
+              "winner": 0
+            }
           },
           {  
             "id": 48,
@@ -425,17 +482,27 @@ export class addMatches1675767562289 implements MigrationInterface {
           },
           {  
             "id": 49,
-            "date": "02/07/2023 17:00",
+            "date": "02/07/2023 19:00",
             "group":"GRUPO D", 
             "player_1": {"name": "A. Llambias"}, 
-            "player_2": {"name": "G. Menendez"}
+            "player_2": {"name": "G. Menendez"},
+            "result": {
+              "set_1": {"games": [6,1], "tie": false},
+              "set_2": {"games": [6,0], "tie": false},
+              "winner": 0
+            }
           },
           {  
             "id": 50,
-            "date": "TBD",
+            "date": "02/09/2023 9:00",
             "group":"GRUPO D", 
             "player_1": {"name": "J. Vazquez"}, 
-            "player_2": {"name": "G. Menendez"}
+            "player_2": {"name": "G. Menendez"},
+            "result": {
+              "set_1": {"games": [1,6], "tie": false},
+              "set_2": {"games": [2,6], "tie": false},
+              "winner": 1
+            }
           },
           {  
             "id": 51,
