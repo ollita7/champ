@@ -42,7 +42,7 @@ const Match: React.FC<IMatchesProps> = ({ profile, match, disabled = false, ...p
           </div>
           <div className={result.set_2.games[player] > result.set_2.games[1 -player] ? 'set winner' : 'set'}>
             {result.set_2.games[player]}
-            {result.set_1.tie && <sup>{result.set_2.tie_result[player]}</sup>}
+            {result.set_2.tie && <sup>{result.set_2.tie_result[player]}</sup>}
           </div>
           {result.super && <div className={winner ? 'set winner' : 'set'}>{result.super[player]}</div>}
         </div>
