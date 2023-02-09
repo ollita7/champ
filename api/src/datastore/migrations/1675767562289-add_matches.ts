@@ -16,6 +16,7 @@ export class addMatches1675767562289 implements MigrationInterface {
             match.team_local = value['player_1'];
             match.team_visit = value['player_2'];
             match.category_id = 'MA';
+            match.stage = value['stage'];
             match.tournament_id = new ObjectId("63e22e9be767643a2f1869cd");
             matches.push(match);
         }); 
