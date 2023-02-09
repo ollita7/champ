@@ -7,7 +7,7 @@
       "player_1": {"name": "S. Ferro"}, 
       "player_2": {"name": "D. Ponte"},
       "result": {
-        "set_1": {"games": [6,7], "tie": true, "tie_result":[5, 7]},
+        "set_1": {"games": [6,7], "tie": true, "tie_result":[3, 7]},
         "set_2": {"games": [3,6], "tie": false},
         "winner": 1
       }
@@ -377,7 +377,7 @@
     },
     {  
       "id": 42,
-      "date": "TBD",
+      "date": "02/12/2023 17:00",
       "group":"GRUPO D", 
       "player_1": {"name": "M. Buzik"}, 
       "player_2": {"name": "A. Llambias"}
